@@ -11,14 +11,14 @@
 		<div class="col-md-1"></div> <!-- "Delete" column -->
 	</div> <!-- END Headings row -->
 
-	<div class="row list-item" ng-repeat="item in localCopy">
+	<div class="row list-item" ng-repeat="item in localCopy | orderBy: 'name'">
 		<div class="col-md-2">{{ item.name }}</div>
 		<div class="col-md-1">{{ item.type }}</div>
 		<div class="col-md-2">{{ item.recommended }}</div>
 		<div class="col-md-4">{{ item.notes }}</div>
 		<div class="col-md-1">{{ item.date }}</div>
 		<div class="col-md-1">{{ item.rating }}</div>
-		<div class="col-md-1 del-button"><span class="glyphicon glyphicon-remove" ng-click="deleteItem()"></span></div>
+		<div class="col-md-1 del-button"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
 	</div> <!-- END ng-repeat .list-item -->
 
 	<div class="row new-item">
