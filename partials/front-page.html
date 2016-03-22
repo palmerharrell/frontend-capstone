@@ -32,7 +32,7 @@
 			<input type="text" ng-model="newItem.recommended" placeholder="Recommended By">
 		</div>
 		<div class="col-md-4">
-			<input type="text" ng-model="newItem.notes" ng-enter="addNewItem()" placeholder="Notes">
+			<input type="text" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
 		</div>
 		<div class="col-md-3">
 			<span ng-show="!newItem.notes"></span>

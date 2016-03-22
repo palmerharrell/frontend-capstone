@@ -18,6 +18,20 @@ app.directive('ngEnter', function () {
   };
 });
 
+// ng-esc directive
+app.directive('ngEsc', function () {
+  return function (scope, element, attrs) {
+    element.bind("keydown keypress", function (event) {
+      if(event.which === 27) {
+        scope.$apply(function (){
+          scope.$eval(attrs.ngEsc);
+        });
+        event.preventDefault();
+      }
+    });
+  };
+});
+
 // Set up angular-route:
 app.config(["$routeProvider",
   function ($routeProvider) {

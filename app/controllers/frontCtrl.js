@@ -63,13 +63,21 @@ app.controller("frontCtrl", [
           $scope.newItem.notes = null;
           // Set focus to Name input to easily add another item
           $("#name-field").focus();
-          // Hide addTip
-          // $("#add-tip").hide();
+
         },
         function(response) {  // Handle REJECT
           console.log("POST Rejected:", response);
         }
       );
+    };
+
+    $scope.cancelAdd = function() {
+      // Clear input boxes and set focus back to Name
+      $scope.newItem.name = null;
+      $scope.newItem.type = null;
+      $scope.newItem.recommended = null;
+      $scope.newItem.notes = null;
+      $("#name-field").focus();
     };
 
     $scope.deleteItem = function() {
