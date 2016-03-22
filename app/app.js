@@ -1,8 +1,8 @@
 
-var app = angular.module("EBMapp", ["ngRoute", "firebase"]);
+var app = angular.module("EBM-App", ["ngRoute", "firebase"]);
 
 // Address of Firebase database
-app.constant('firebaseURL', "https://angularpracticeph.firebaseio.commmmm");
+app.constant('firebaseURL', "https://entertainmentbacklog.firebaseio.com");
 
 // ng-enter directive
 app.directive('ngEnter', function () {
@@ -25,18 +25,6 @@ app.config(["$routeProvider",
       when("/", {
         templateUrl: "partials/front-page.html",
         controller: "frontCtrl"
-      }).
-      when("/page2", {
-        templateUrl: "partials/page-2.html",
-        controller: "page2Ctrl"
-      }).
-      when("/page3", {
-        templateUrl: "partials/page-3.html",
-        controller: "page3Ctrl"
-      }).
-      when("/page4", {
-        templateUrl: "partials/page-4.html",
-        controller: "page4Ctrl"
       }).
       otherwise({
         redirectTo: "/"
