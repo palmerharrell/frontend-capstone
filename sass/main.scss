@@ -1,4 +1,30 @@
-.list-item {
-	margin-top: 30px;
+h3 {
+	text-align: center;
+}
+
+.row {
+	div {
+		// border: 1px dashed royalblue;
+	}
+}
+
+.list-headers,
+.list-item,
+.new-item {
+	margin: 0 5px;
+	padding: 10px;
+	// border: 1px dashed royalblue;
+}
+
+.list-headers {
+	font-weight: bold;
+}
+
+.list-item,
+.new-item {
 	border: 1px dashed royalblue;
+}
+
+.new-item {
+	color: lightgray;
 }

@@ -1,14 +1,31 @@
-<div>
-	<h3>Front Page</h3>
-	<div ng-repeat="item in localCopy">
-		<div class="list-item">
-			<p>Name: {{ item.name }}</p>
-			<p>Type: {{ item.type }}</p>
-			<p>Recommended By: {{ item.recommended }}</p>
-			<p>Notes: {{ item.notes }}</p>
-			<p>Date Added: {{ item.date }}</p>
-			<p>Rating: {{ item.rating }}</p>
-			<p>Finished: {{ item.finished }}</p>
-		</div>
-	</div>
-</div>
+
+<div class="container">
+
+	<div class="row list-headers">
+		<div class="col-md-2">Name</div>
+		<div class="col-md-2">Type</div>
+		<div class="col-md-2">Recommended By</div>
+		<div class="col-md-4">Notes</div>
+		<div class="col-md-1">Added</div>
+		<div class="col-md-1">Rating</div>
+	</div> <!-- END Headings row -->
+
+	<div class="row list-item" ng-repeat="item in localCopy">
+		<div class="col-md-2">{{ item.name }}</div>
+		<div class="col-md-2">{{ item.type }}</div>
+		<div class="col-md-2">{{ item.recommended }}</div>
+		<div class="col-md-4">{{ item.notes }}</div>
+		<div class="col-md-1">{{ item.date }}</div>
+		<div class="col-md-1">{{ item.rating }}</div>
+	</div> <!-- END ng-repeat -->
+
+	<div class="row new-item">
+		<div class="col-md-2">Name</div>
+		<div class="col-md-2">Type</div>
+		<div class="col-md-2">Recommended By</div>
+		<div class="col-md-4">Notes</div>
+		<div class="col-md-1">Added</div>
+		<div class="col-md-1">Rating</div>
+	</div> <!-- END .new-item -->
+
+</div> <!-- END .container -->
