@@ -62,9 +62,29 @@ app.controller("frontCtrl", [
       );
     };
 
+    $scope.deleteItem = function() {
+
+      $http.delete(firebaseURL + '/items/' + this.item.id +'.json')
+      .then(
+        function() { // Handle RESOLVE
+          $scope.loadFromFirebase(); // Reload Firebase db
+        },
+        function() { // Handle REJECT
+          console.log("DELETE rejected.", response);
+        }
+      );
+    };
+
     $scope.loadFromFirebase(); // Get list on page load
 
   }
 
 ]);
+
+
+
+
+
+
+
 
