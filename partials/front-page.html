@@ -23,7 +23,7 @@
 
 	<div class="row new-item">
 		<div class="col-md-2">
-			<input type="text" ng-model="newItem.name" placeholder="Name">
+			<input type="text" ng-model="newItem.name" placeholder="Name" id="name-field">
 		</div>
 		<div class="col-md-1">
 			<input type="text" ng-model="newItem.type" placeholder="Type">
@@ -34,10 +34,12 @@
 		<div class="col-md-4">
 			<input type="text" ng-model="newItem.notes" ng-enter="addNewItem()" placeholder="Notes">
 		</div>
-		<div class="col-md-1"></div> <!-- "Added" column -->
-		<div class="col-md-1"></div> <!-- "Rating" column -->
-		<div class="col-md-1"></div> <!-- "Delete" column -->
+		<div class="col-md-3">
+			<span ng-show="!newItem.notes"></span>
+			<span ng-show="newItem.notes">Press Enter to Save or Esc to Cancel</span>
+		</div> <!-- in place of Added, Rating, Delete columns -->
 
 	</div> <!-- END .new-item -->
 
 </div> <!-- END .container -->
+

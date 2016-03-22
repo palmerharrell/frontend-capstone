@@ -56,6 +56,15 @@ app.controller("frontCtrl", [
       .then(
         function() {  // Handle RESOLVE
           $scope.loadFromFirebase(); // Reload Firebase db
+           // Clear input boxes on submit
+          $scope.newItem.name = null;
+          $scope.newItem.type = null;
+          $scope.newItem.recommended = null;
+          $scope.newItem.notes = null;
+          // Set focus to Name input to easily add another item
+          $("#name-field").focus();
+          // Hide addTip
+          // $("#add-tip").hide();
         },
         function(response) {  // Handle REJECT
           console.log("POST Rejected:", response);
