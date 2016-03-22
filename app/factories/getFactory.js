@@ -9,7 +9,6 @@ app.factory("getFactory", function($q, $http, firebaseURL) {
       $http.get(firebaseURL + '/.json')
       .success(
         function(JSONobjFromGet) {
-          // "resolve" is function after .then in other js file
           resolve(JSONobjFromGet.items);
         },
         function(error) {

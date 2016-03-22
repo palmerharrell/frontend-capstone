@@ -37,6 +37,7 @@ app.controller("frontCtrl", [
 
     $scope.addNewItem = function() {
       console.log("newItem: ", $scope.newItem);
+      $scope.newItem.date = new Date().toLocaleDateString(); // Set date added
 
       $http.post(firebaseURL + '/items.json',
 
