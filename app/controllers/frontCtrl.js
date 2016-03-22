@@ -6,6 +6,18 @@ app.controller("frontCtrl", [
     
     console.log("frontCtrl.js is running.");
 
+    $scope.newItem = {
+      id: "", 
+      fbuid: "", 
+      name: "", 
+      type: "", 
+      finished: false, 
+      recommended: "",
+      notes: "",
+      rating: 0,
+      date: ""
+    };
+
     $scope.loadFromFirebase = function() {
       $scope.localCopy = [];
       getFactory().then(
@@ -21,7 +33,11 @@ app.controller("frontCtrl", [
       );
     };
 
-    $scope.loadFromFirebase();
+    $scope.addNewItem = function() {
+      console.log("newItem: ", $scope.newItem);
+    };
+
+    $scope.loadFromFirebase(); // Get list on page load
 
   }
 
