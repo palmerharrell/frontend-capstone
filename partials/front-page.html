@@ -11,7 +11,7 @@
 		<div class="col-md-1"></div> <!-- "Delete" column -->
 	</div> <!-- END Headings row -->
 
-	<div class="row list-item" ng-repeat="item in localCopy | orderBy: 'name'">
+	<div class="row list-item" ng-repeat="item in localCopy | orderBy: 'date'">
 		<div class="col-md-2">{{ item.name }}</div>
 		<div class="col-md-1">{{ item.type }}</div>
 		<div class="col-md-2">{{ item.recommended }}</div>
