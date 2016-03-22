@@ -1,0 +1,37 @@
+{
+  "items": {
+    "fbKey01": {
+      "id": "101",
+      "fbuid": "fakeUid101",
+      "name": "The Big Chill", 
+      "type": "movie",
+      "finished": true,
+      "recommended": "Laura",
+      "notes": "1983, drama, directed by Lawrence Kasdan",
+      "rating": 8,
+      "date": "Date added. String or Number? Is there a date format?"
+    },
+    "fbKey02": {
+      "id": "102",
+      "fbuid": "fakeUid101",
+      "name": "The Postal Service", 
+      "type": "music",
+      "finished": false,
+      "recommended": "Laura",
+      "notes": "Early 00s Indie Pop",
+      "rating": 0,
+      "date": "Date added. String or Number? Is there a date format?"
+    },
+    "fbKey03": {
+      "id": "103",
+      "fbuid": "fakeUid102",
+      "name": "Ori and the Blind Forest", 
+      "type": "game",
+      "finished": true,
+      "recommended": "The Internet",
+      "notes": "2015, platformer, great art style & soundtrack",
+      "rating": 10,
+      "date": "Date added. String or Number? Is there a date format?"
+    }
+  }
+}
