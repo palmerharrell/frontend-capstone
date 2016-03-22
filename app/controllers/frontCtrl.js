@@ -94,6 +94,7 @@ app.controller("frontCtrl", [
     };
 
     $scope.loadFromFirebase(); // Get list on page load
+    $("#name-field").focus(); // Set focus to new item inputs
 
   }
 
