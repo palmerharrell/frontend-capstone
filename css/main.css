@@ -3,6 +3,18 @@
   line-height: 60px;
   text-align: center; }
 
+.list-filters,
+.media-filters {
+  text-align: center; }
+  .list-filters div,
+  .media-filters div {
+    border: 1px dashed royalblue;
+    height: 40px;
+    line-height: 40px; }
+
+.media-filters {
+  margin-bottom: 30px; }
+
 .list-headers,
 .list-item,
 .new-item {
@@ -21,3 +33,6 @@
 
 .hand {
   cursor: pointer; }
+
+#notes-input {
+  width: 350px; }

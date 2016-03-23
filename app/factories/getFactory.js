@@ -1,15 +1,18 @@
 
-app.factory("getFactory", function($q, $http, firebaseURL) {
+app.factory("getFactory", function($q, $http, firebaseURL, authFactory) {
 
   function getFromFirebase() {
 
     // Return a promise
     return $q(function(resolve, reject) {
       
-      $http.get(firebaseURL + '/.json')
+      var currentUser = authFactory.getUser(); // get currently logged in user
+
+      // get only current user's items from firebase
+      $http.get(`${firebaseURL}/items/.json?orderBy="fbuid"&equalTo="${currentUser.uid}"`)
       .success(
         function(JSONobjFromGet) {
-          resolve(JSONobjFromGet.items);
+          resolve(JSONobjFromGet);
         },
         function(error) {
           reject(error);
@@ -22,3 +25,5 @@ app.factory("getFactory", function($q, $http, firebaseURL) {
   return getFromFirebase;
 
 });
+
+

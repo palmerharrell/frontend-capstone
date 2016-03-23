@@ -33,6 +33,7 @@ app.directive('ngEsc', function () {
   };
 });
 
+// check if user is authenticated
 var isAuth = (authFactory) => new Promise((resolve, reject) => {
   if (authFactory.isAuthenticated()) {
     console.log("User is authenticated, resolve route promise");
@@ -42,18 +43,6 @@ var isAuth = (authFactory) => new Promise((resolve, reject) => {
     reject();
   }
 });
-
-// var isAuth = function(authFactory) {
-//   new Promise(resolve, reject) {
-//     if (authFactory.isAuthenticated()) {
-//       console.log("User is authenticated, resolve route promise");
-//       resolve();
-//     } else {
-//       console.log("User is not authenticated, reject route promise");
-//       reject();
-//     }
-//   }
-// };
 
 // Set up angular-route
 app.config(["$routeProvider",
@@ -65,6 +54,10 @@ app.config(["$routeProvider",
         resolve: { isAuth }
       }).
       when("/login", {
+        templateUrl: "partials/login.html",
+        controller: "LoginCtrl"
+      }).
+      when("/logout", {
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
       }).

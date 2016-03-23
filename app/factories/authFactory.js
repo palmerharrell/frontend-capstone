@@ -2,12 +2,14 @@
 
 app.factory("authFactory", function (firebaseURL) {
   let ref = new Firebase(firebaseURL);
+  let currentUserData = null;
 
   return {
     
     // Determine if the client is authenticated
     isAuthenticated () {
       let authData = ref.getAuth();
+      currentUserData = authData;
       if (authData) {
         return true;
       } else {
@@ -30,6 +32,11 @@ app.factory("authFactory", function (firebaseURL) {
           }
         });
       });
+    },
+
+    getUser () {
+      return currentUserData;
     }
+
   };
 });

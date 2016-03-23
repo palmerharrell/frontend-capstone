@@ -1,6 +1,22 @@
 
 <div class="container">
 
+	<!-- Filter rows -->
+	<div class="row list-filters">
+		<div class="col-md-6">Backlog</div>
+		<div class="col-md-6">Finished</div>
+	</div>
+	
+	<div class="row media-filters">
+		<div class="col-md-2">All</div>
+		<div class="col-md-2">Movies</div>
+		<div class="col-md-2">TV Shows</div>
+		<div class="col-md-2">Music</div>
+		<div class="col-md-2">Books</div>
+		<div class="col-md-2">Video Games</div>
+	</div>
+	<!-- END Filter rows -->
+
 	<div class="row list-headers">
 		<div class="col-md-2">Name</div>
 		<div class="col-md-1">Type</div>
@@ -32,7 +48,7 @@
 			<input type="text" ng-model="newItem.recommended" placeholder="Recommended By">
 		</div>
 		<div class="col-md-4">
-			<input type="text" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
+			<input type="text" id="notes-input" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
 		</div>
 		<div class="col-md-3">
 			<span ng-show="!newItem.notes"></span>

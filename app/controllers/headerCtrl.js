@@ -5,11 +5,12 @@ app.controller("headerCtrl",
   "firebaseURL",
 
   function ($location, firebaseURL) {
-
+  	console.log("headerCtrl is running");
     var ref = new Firebase(firebaseURL);
 
     // Unauthenticate user when /logout path used
-    if ($location.path() === "/logout") {
+    if ($location.path() === "/#/logout") {
+    	console.log("path changed to /logout");
       ref.unauth();
     }
 

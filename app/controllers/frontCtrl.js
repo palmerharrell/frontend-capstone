@@ -3,10 +3,14 @@ app.controller("frontCtrl", [
   "$http",
   "firebaseURL",
   "getFactory",
+  "authFactory",
   
-  function($scope, $http, firebaseURL, getFactory) {
+  function($scope, $http, firebaseURL, getFactory, authFactory) {
     
     console.log("frontCtrl.js is running.");
+
+    var currentUser = authFactory.getUser();
+    console.log("currentUser ID: ", currentUser.uid);
 
     $scope.newItem = {
       id: "", 
@@ -26,6 +30,7 @@ app.controller("frontCtrl", [
           function(JSONobjFromGet) { // Handle RESOLVE
             for(var key in JSONobjFromGet) {
               JSONobjFromGet[key].id = key;
+              JSONobjFromGet[key].fbuid = currentUser.uid;
               $scope.localCopy.push(JSONobjFromGet[key]);
             }
           },
@@ -38,6 +43,7 @@ app.controller("frontCtrl", [
     $scope.addNewItem = function() {
       console.log("newItem: ", $scope.newItem);
       $scope.newItem.date = new Date().toLocaleDateString(); // Set date added
+      $scope.newItem.fbuid = currentUser.uid; // Tie this item to current user
 
       $http.post(firebaseURL + '/items.json',
 

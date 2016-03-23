@@ -15,10 +15,10 @@ app.controller("LoginCtrl",
     $scope.account = { email: "", password: "" };
     $scope.message = "";
 
-    // Unauthenticate user when /logout path used
-    if ($location.path() === "/logout") {
-      ref.unauth();
-    }
+    // // Unauthenticate user when /logout path used
+    // if ($location.path() === "/logout") {
+    //   ref.unauth();
+    // }
 
     // register a new user account and login  
     $scope.register = () => {
