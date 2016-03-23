@@ -11,14 +11,10 @@ app.controller("LoginCtrl",
   function ($scope, $location, $http, authFactory, firebaseURL) {
 
     let ref = new Firebase(firebaseURL);
+    ref.unauth(); // If a user is logged in, log them out
 
     $scope.account = { email: "", password: "" };
-    $scope.message = "";
-
-    // // Unauthenticate user when /logout path used
-    // if ($location.path() === "/logout") {
-    //   ref.unauth();
-    // }
+    // $scope.message = "";
 
     // register a new user account and login  
     $scope.register = () => {
