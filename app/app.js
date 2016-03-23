@@ -1,3 +1,4 @@
+"use strict";
 
 var app = angular.module("EBM-App", ["ngRoute", "firebase"]);
 
@@ -32,16 +33,62 @@ app.directive('ngEsc', function () {
   };
 });
 
-// Set up angular-route:
+var isAuth = (authFactory) => new Promise((resolve, reject) => {
+  if (authFactory.isAuthenticated()) {
+    console.log("User is authenticated, resolve route promise");
+    resolve();
+  } else {
+    console.log("User is not authenticated, reject route promise");
+    reject();
+  }
+});
+
+// var isAuth = function(authFactory) {
+//   new Promise(resolve, reject) {
+//     if (authFactory.isAuthenticated()) {
+//       console.log("User is authenticated, resolve route promise");
+//       resolve();
+//     } else {
+//       console.log("User is not authenticated, reject route promise");
+//       reject();
+//     }
+//   }
+// };
+
+// Set up angular-route
 app.config(["$routeProvider",
   function ($routeProvider) {
     $routeProvider.
       when("/", {
         templateUrl: "partials/front-page.html",
-        controller: "frontCtrl"
+        controller: "frontCtrl",
+        resolve: { isAuth }
+      }).
+      when("/login", {
+        templateUrl: "partials/login.html",
+        controller: "LoginCtrl"
       }).
       otherwise({
         redirectTo: "/"
       });
   }]);
+
+// redirect to login if user is not authenticated
+app.run([
+  "$location",
+  "firebaseURL",
+
+  function ($location, firebaseURL) {
+    var ref = new Firebase(firebaseURL);
+
+    ref.onAuth(function(authData) {
+      if (!authData) {
+        $location.path("/login");
+      }
+    });
+  }
+]);
+
+
+
 
