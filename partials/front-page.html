@@ -42,7 +42,15 @@
 			<input type="text" ng-model="newItem.name" placeholder="Name" id="name-field">
 		</div>
 		<div class="col-md-1">
-			<input type="text" ng-model="newItem.type" placeholder="Type">
+			<!-- <input type="text" ng-model="newItem.type" placeholder="Type"> -->
+			<select name="typeSelect" id="typeSelect" ng-model="newItem.type">
+				<option value="" disabled ng-selected="true" disabled>Type</option>
+				<option value="movie">Movie</option>
+				<option value="show">TV Show</option>
+				<option value="music">Music</option>
+				<option value="book">Book</option>
+				<option value="game">Game</option>
+			</select>
 		</div>
 		<div class="col-md-2">
 			<input type="text" ng-model="newItem.recommended" placeholder="Recommended By">
