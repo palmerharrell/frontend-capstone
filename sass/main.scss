@@ -45,6 +45,11 @@
     cursor: pointer;
 }
 
-#notes-input {
-	width: 350px;
+#name-input,
+#type-select,
+#notes-input,
+#recommended-input,
+.usage-tip {
+	// width: 350px;
+	width: 100%;
 }
