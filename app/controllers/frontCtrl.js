@@ -12,6 +12,9 @@ app.controller("frontCtrl", [
     var currentUser = authFactory.getUser();
     console.log("currentUser ID: ", currentUser.uid);
 
+    var selectedFilters = {};
+    // selectedFilters.finished = false;
+
     $scope.newItem = {
       id: "", 
       fbuid: "", 
@@ -29,6 +32,7 @@ app.controller("frontCtrl", [
       getFactory().then(
           function(JSONobjFromGet) { // Handle RESOLVE
             for(var key in JSONobjFromGet) {
+              console.log("Item: ", JSONobjFromGet[key].name, "Finished: ", JSONobjFromGet[key].finished);
               JSONobjFromGet[key].id = key;
               JSONobjFromGet[key].fbuid = currentUser.uid;
               $scope.localCopy.push(JSONobjFromGet[key]);

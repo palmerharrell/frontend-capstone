@@ -1,19 +1,19 @@
 
-<div class="container">
+<div class="container" ng-init="selectedFilters.finished = false"> <!-- Filter to show only Backlog on page load -->
 
 	<!-- Filter rows -->
 	<div class="row list-filters">
-		<div class="col-md-6">Backlog</div>
-		<div class="col-md-6">Finished</div>
+		<div class="col-md-6 hand" ng-click="selectedFilters.finished = false">Backlog</div>
+		<div class="col-md-6 hand" ng-click="selectedFilters.finished = true">Finished</div>
 	</div>
 	
 	<div class="row media-filters">
-		<div class="col-md-2">All</div>
-		<div class="col-md-2">Movies</div>
-		<div class="col-md-2">TV Shows</div>
-		<div class="col-md-2">Music</div>
-		<div class="col-md-2">Books</div>
-		<div class="col-md-2">Video Games</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = ''">All</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'movie'">Movies</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'show'">TV Shows</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'music'">Music</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'book'">Books</div>
+		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'game'">Video Games</div>
 	</div>
 	<!-- END Filter rows -->
 
@@ -27,7 +27,7 @@
 		<div class="col-md-1"></div> <!-- "Delete" column -->
 	</div> <!-- END Headings row -->
 
-	<div class="row list-item" ng-repeat="item in localCopy | orderBy: 'date'">
+	<div class="row list-item" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: 'date'">
 		<div class="col-md-2">{{ item.name }}</div>
 		<div class="col-md-1">{{ item.type }}</div>
 		<div class="col-md-2">{{ item.recommended }}</div>
