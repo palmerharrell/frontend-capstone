@@ -33,6 +33,35 @@ app.directive('ngEsc', function () {
   };
 });
 
+// focus on show directive
+app.directive('focusOnShow', function($timeout) {
+    return {
+        restrict: 'A',
+        link: function($scope, $element, $attr) {
+            if ($attr.ngShow){
+                $scope.$watch($attr.ngShow, function(newValue){
+                    if(newValue){
+                        $timeout(function(){
+                            $element.focus();
+                        }, 0);
+                    }
+                })      
+            }
+            if ($attr.ngHide){
+                $scope.$watch($attr.ngHide, function(newValue){
+                    if(!newValue){
+                        $timeout(function(){
+                            $element.focus();
+                        }, 0);
+                    }
+                })      
+            }
+
+        }
+    };
+});
+
+
 // check if user is authenticated
 var isAuth = (authFactory) => new Promise((resolve, reject) => {
   if (authFactory.isAuthenticated()) {

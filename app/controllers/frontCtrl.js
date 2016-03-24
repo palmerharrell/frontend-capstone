@@ -97,7 +97,6 @@ app.controller("frontCtrl", [
     };
 
     $scope.deleteItem = function() {
-
       $http.delete(firebaseURL + '/items/' + this.item.id +'.json')
       .then(
         function() { // Handle RESOLVE
@@ -109,8 +108,11 @@ app.controller("frontCtrl", [
       );
     };
 
-    $scope.editMode = function() {
+    $scope.editMode = function(propInput) {
       console.log("Edit Mode, this:", this);
+      var inputID = `#${propInput}`;
+      console.log(inputID);
+      $(inputID).focus();
       // set value of $scope.newProp and model input after same
     }
 
