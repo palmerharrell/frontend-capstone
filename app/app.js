@@ -61,7 +61,6 @@ app.directive('focusOnShow', function($timeout) {
     };
 });
 
-
 // check if user is authenticated
 var isAuth = (authFactory) => new Promise((resolve, reject) => {
   if (authFactory.isAuthenticated()) {

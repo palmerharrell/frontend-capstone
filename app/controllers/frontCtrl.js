@@ -16,9 +16,11 @@ app.controller("frontCtrl", [
     var selectedFilters = {};
     
     // For editing properties of existing items
-    $scope.newName = '';
-    $scope.newRec = '';
-    $scope.newNotes = '';
+    $scope.editProp = {
+      name: "",
+      recommended: "",
+      notes: ""
+    };
 
     $scope.newItem = {
       id: "", 
@@ -108,16 +110,17 @@ app.controller("frontCtrl", [
       );
     };
 
-    $scope.editMode = function(propInput) {
-      console.log("Edit Mode, this:", this);
-      var inputID = `#${propInput}`;
-      console.log(inputID);
-      $(inputID).focus();
-      // set value of $scope.newProp and model input after same
+    $scope.editMode = function(propName) {
+      // set value of input to current property value
+      $scope.editProp[propName] = this.item[propName];
+    }
+
+    $scope.cancelEdit = function() {
+      // Run this on Esc when in edit mode
+      // Hide input and show... just relaod Firebase db? Try this 1st!
     }
 
     $scope.editProperty = function(propToChange, newVal) {
-      console.log("this.item.id: ", this.item.id); // This is the $id of the item clicked
       var ref = new Firebase(firebaseURL + '/items/' + this.item.id);
       var obj = $firebaseObject(ref);
       obj.$loaded().then(function() {
@@ -133,47 +136,6 @@ app.controller("frontCtrl", [
         console.log("Promise Rejected");
       });
     };
-
-
-
-
-// Edit Property Example:
-    // $scope.updateOnFirebase = function(propToChange, newVal) {
-    //   console.log("this.item.id: ", this.item.id); // This is the $id of the item clicked
-    //   var ref = new Firebase(firebaseURL + '/animals/' + this.item.id);
-    //   var obj = $firebaseObject(ref);
-    //   // to take an action after the data loads, use the $loaded() promise
-    //   obj.$loaded().then(function() {
-    //     obj[propToChange] = newVal;
-    //     // console.log("obj:", obj);
-    //     // console.log("obj.$id:", obj.$id);
-    //     // console.log("obj.id:", obj.id);
-    //     // console.log("obj.name:", obj.name);
-    //     // console.log("obj.type:", obj.type);
-    //     // console.log("obj.description:", obj.description);
-    //     // console.log("obj.fbUid:", obj.fbUid);
-    //     obj.$save().then(function() {
-    //       $scope.loadFromFirebase(); // Reload Firebase db
-    //     },
-    //     function() {
-    //       console.log("Promise Rejected");
-    //     });
-    //   },
-    //   function() {
-    //     console.log("Promise Rejected");
-    //   });
-    // };
-
-
-
-
-
-
-
-
-
-
-
 
 
 
