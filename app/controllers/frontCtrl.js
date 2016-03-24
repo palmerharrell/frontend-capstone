@@ -2,10 +2,11 @@ app.controller("frontCtrl", [
   "$scope",
   "$http",
   "firebaseURL",
+  "$firebaseObject",
   "getFactory",
   "authFactory",
   
-  function($scope, $http, firebaseURL, getFactory, authFactory) {
+  function($scope, $http, firebaseURL, $firebaseObject, getFactory, authFactory) {
     
     console.log("frontCtrl.js is running.");
 
@@ -13,7 +14,11 @@ app.controller("frontCtrl", [
     console.log("currentUser ID: ", currentUser.uid);
 
     var selectedFilters = {};
-    // selectedFilters.finished = false;
+    
+    // For editing properties of existing items
+    $scope.newName = '';
+    $scope.newRec = '';
+    $scope.newNotes = '';
 
     $scope.newItem = {
       id: "", 
@@ -104,12 +109,81 @@ app.controller("frontCtrl", [
       );
     };
 
+    $scope.editMode = function() {
+      console.log("Edit Mode, this:", this);
+      // set value of $scope.newProp and model input after same
+    }
+
+    $scope.editProperty = function(propToChange, newVal) {
+      console.log("this.item.id: ", this.item.id); // This is the $id of the item clicked
+      var ref = new Firebase(firebaseURL + '/items/' + this.item.id);
+      var obj = $firebaseObject(ref);
+      obj.$loaded().then(function() {
+        obj[propToChange] = newVal;
+        obj.$save().then(function() {
+          $scope.loadFromFirebase(); // Reload Firebase db
+        },
+        function() {
+          console.log("Promise Rejected");
+        });
+      },
+      function() {
+        console.log("Promise Rejected");
+      });
+    };
+
+
+
+
+// Edit Property Example:
+    // $scope.updateOnFirebase = function(propToChange, newVal) {
+    //   console.log("this.item.id: ", this.item.id); // This is the $id of the item clicked
+    //   var ref = new Firebase(firebaseURL + '/animals/' + this.item.id);
+    //   var obj = $firebaseObject(ref);
+    //   // to take an action after the data loads, use the $loaded() promise
+    //   obj.$loaded().then(function() {
+    //     obj[propToChange] = newVal;
+    //     // console.log("obj:", obj);
+    //     // console.log("obj.$id:", obj.$id);
+    //     // console.log("obj.id:", obj.id);
+    //     // console.log("obj.name:", obj.name);
+    //     // console.log("obj.type:", obj.type);
+    //     // console.log("obj.description:", obj.description);
+    //     // console.log("obj.fbUid:", obj.fbUid);
+    //     obj.$save().then(function() {
+    //       $scope.loadFromFirebase(); // Reload Firebase db
+    //     },
+    //     function() {
+    //       console.log("Promise Rejected");
+    //     });
+    //   },
+    //   function() {
+    //     console.log("Promise Rejected");
+    //   });
+    // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $scope.loadFromFirebase(); // Get list on page load
     $("#name-input").focus(); // Set focus to new item inputs
 
   }
 
 ]);
+
+
+
 
 
 

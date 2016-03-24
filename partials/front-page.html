@@ -28,7 +28,8 @@
 	</div> <!-- END Headings row -->
 
 	<div class="row list-item" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: 'date'">
-		<div class="col-md-2">{{ item.name }}</div>
+		<div class="col-md-2" ng-click="editName = !editName" ng-hide="editName">{{ item.name }}</div>
+		<div class="col-md-2" ng-show="editName"><input type="text" id="new-name" ng-model="newName" ng-enter="editProperty('name', newName)"></div>
 		<div class="col-md-1">{{ item.type }}</div>
 		<div class="col-md-2">{{ item.recommended }}</div>
 		<div class="col-md-4">{{ item.notes }}</div>
