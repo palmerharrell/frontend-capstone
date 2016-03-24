@@ -110,15 +110,12 @@ app.controller("frontCtrl", [
       );
     };
 
+    // set value of input to current property value
     $scope.editMode = function(propName) {
-      // set value of input to current property value
       $scope.editProp[propName] = this.item[propName];
     }
 
     $scope.cancelEdit = function() {
-      // Run this on Esc when in edit mode
-      // Hide input and show... just relaod Firebase db? Try this 1st!
-      console.log("cancelEdit launched");
       $scope.loadFromFirebase(); // Reload Firebase db
     }
 
@@ -143,6 +140,7 @@ app.controller("frontCtrl", [
 
     $scope.loadFromFirebase(); // Get list on page load
     $("#name-input").focus(); // Set focus to new item inputs
+    $("#logout-link").show(); // Show logout link
 
   }
 

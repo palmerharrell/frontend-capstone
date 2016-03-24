@@ -9,6 +9,8 @@ app.controller("LoginCtrl",
   "firebaseURL",
 
   function ($scope, $location, $http, authFactory, firebaseURL) {
+    
+    $("#logout-link").hide(); // Hide logout link
 
     let ref = new Firebase(firebaseURL);
     ref.unauth(); // If a user is logged in, log them out

@@ -76,10 +76,6 @@ app.directive('selectOnFocus', ['$window', function ($window) {
     };
 }]);
 
-
-
-
-
 // check if user is authenticated
 var isAuth = (authFactory) => new Promise((resolve, reject) => {
   if (authFactory.isAuthenticated()) {
