@@ -14,8 +14,7 @@
 		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'music'">Music</div>
 		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'book'">Books</div>
 		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'game'">Video Games</div>
-	</div>
-	<!-- END Filter rows -->
+	</div> <!-- END Filter rows -->
 
 	<div class="row list-headers">
 		<div class="col-md-2">Name</div>
@@ -27,20 +26,47 @@
 		<div class="col-md-1"></div> <!-- "Delete" column -->
 	</div> <!-- END Headings row -->
 
+<!-- START ng-repeat .list-item -->
 	<div class="row list-item" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: 'date'">
+		
 		<!-- Name Column -->
 		<div class="col-md-2">
 			<span ng-click="editName = !editName; editMode('name')" ng-hide="editName">{{ item.name }}</span>
-			<input ng-show="editName" focus-on-show type="text" id="new-name" ng-model="editProp.name" ng-enter="editProperty('name', editProp.name)">
+			<input ng-show="editName" focus-on-show select-on-focus type="text" id="new-name" ng-model="editProp.name" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-enter="editProperty('name', editProp.name)">
 		</div>
 
-		<div class="col-md-1">{{ item.type }}</div>
-		<div class="col-md-2">{{ item.recommended }}</div>
-		<div class="col-md-4">{{ item.notes }}</div>
+		<!-- Type Column -->
+		<!-- <div class="col-md-1">{{ item.type }}</div> -->
+		<div class="col-md-1">
+			<span ng-click="editType = !editType; editMode('type')" ng-hide="editType">{{ item.type }}</span>
+			<select ng-show="editType" focus-on-show id="new-rec" ng-model="editProp.type" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-change="editProperty('type', editProp.type)">
+				<option value="" disabled ng-selected="true" disabled>Type</option>
+				<option value="movie">Movie</option>
+				<option value="show">TV Show</option>
+				<option value="music">Music</option>
+				<option value="book">Book</option>
+				<option value="game">Game</option>
+			</select>
+		</div>
+
+		
+		<!-- Recommended Column -->
+		<div class="col-md-2">
+			<span ng-click="editRec = !editRec; editMode('recommended')" ng-hide="editRec">{{ item.recommended }}</span>
+			<input ng-show="editRec" focus-on-show select-on-focus type="text" id="new-rec" ng-model="editProp.recommended" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-enter="editProperty('recommended', editProp.recommended)">
+		</div>		
+
+		<!-- Notes Column -->
+		<div class="col-md-4">
+			<span ng-click="editNotes = !editNotes; editMode('notes')" ng-hide="editNotes">{{ item.notes }}</span>
+			<input ng-show="editNotes" focus-on-show select-on-focus type="text" id="new-notes" ng-model="editProp.notes" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-enter="editProperty('notes', editProp.notes)">
+		</div>	
+
 		<div class="col-md-1">{{ item.date | date:'MM/dd/yyyy'}}</div>
 		<div class="col-md-1">{{ item.rating }}</div>
 		<div class="col-md-1 del-button"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
-	</div> <!-- END ng-repeat .list-item -->
+	</div>
+<!-- END ng-repeat .list-item -->
 
 	<div class="row new-item">
 		<div class="col-md-2">

@@ -61,6 +61,25 @@ app.directive('focusOnShow', function($timeout) {
     };
 });
 
+// Select input text when input gains focus
+app.directive('selectOnFocus', ['$window', function ($window) {
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            element.on('focus', function () {
+                if (!$window.getSelection().toString()) {
+                    // Required for mobile Safari
+                    this.setSelectionRange(0, this.value.length)
+                }
+            });
+        }
+    };
+}]);
+
+
+
+
+
 // check if user is authenticated
 var isAuth = (authFactory) => new Promise((resolve, reject) => {
   if (authFactory.isAuthenticated()) {

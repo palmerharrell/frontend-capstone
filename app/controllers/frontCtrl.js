@@ -118,6 +118,8 @@ app.controller("frontCtrl", [
     $scope.cancelEdit = function() {
       // Run this on Esc when in edit mode
       // Hide input and show... just relaod Firebase db? Try this 1st!
+      console.log("cancelEdit launched");
+      $scope.loadFromFirebase(); // Reload Firebase db
     }
 
     $scope.editProperty = function(propToChange, newVal) {
