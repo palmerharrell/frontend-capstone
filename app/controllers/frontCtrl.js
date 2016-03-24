@@ -46,7 +46,8 @@ app.controller("frontCtrl", [
 
     $scope.addNewItem = function() {
       console.log("newItem: ", $scope.newItem);
-      $scope.newItem.date = new Date().toLocaleDateString(); // Set date added
+      // $scope.newItem.date = new Date().toLocaleDateString(); // Set date added
+      $scope.newItem.date = new Date(); // Set date added
       $scope.newItem.fbuid = currentUser.uid; // Tie this item to current user
 
       $http.post(firebaseURL + '/items.json',
@@ -72,7 +73,7 @@ app.controller("frontCtrl", [
           $scope.newItem.recommended = null;
           $scope.newItem.notes = null;
           // Set focus to Name input to easily add another item
-          $("#name-field").focus();
+          $("#name-input").focus();
 
         },
         function(response) {  // Handle REJECT
@@ -87,7 +88,7 @@ app.controller("frontCtrl", [
       $scope.newItem.type = null;
       $scope.newItem.recommended = null;
       $scope.newItem.notes = null;
-      $("#name-field").focus();
+      $("#name-input").focus();
     };
 
     $scope.deleteItem = function() {
@@ -104,7 +105,7 @@ app.controller("frontCtrl", [
     };
 
     $scope.loadFromFirebase(); // Get list on page load
-    $("#name-field").focus(); // Set focus to new item inputs
+    $("#name-input").focus(); // Set focus to new item inputs
 
   }
 
