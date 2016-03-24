@@ -1,10 +1,10 @@
 <section>
   <h1>Login or Register</h1>
   <div>
-    Email: <input type="text" autofocus="true" ng-model="account.email">
+    Email: <input type="text" id="email-input" ng-model="account.email">
   </div>
   <div>
-    Password: <input type="password" ng-model="account.password">
+    Password: <input type="password" ng-model="account.password" ng-enter="login()">
   </div>
   <button ng-click="login()">Login</button>
   <button ng-click="register()">Register</button>

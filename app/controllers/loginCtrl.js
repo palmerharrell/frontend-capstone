@@ -11,6 +11,7 @@ app.controller("LoginCtrl",
   function ($scope, $location, $http, authFactory, firebaseURL) {
     
     $("#logout-link").hide(); // Hide logout link
+    $("#email-input").focus(); // Set focus to email input
 
     let ref = new Firebase(firebaseURL);
     ref.unauth(); // If a user is logged in, log them out
