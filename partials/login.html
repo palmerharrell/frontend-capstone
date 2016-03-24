@@ -1,11 +1,35 @@
-<section>
-  <h1>Login or Register</h1>
-  <div>
-    Email: <input type="text" id="email-input" ng-model="account.email">
-  </div>
-  <div>
-    Password: <input type="password" ng-model="account.password" ng-enter="login()">
-  </div>
-  <button ng-click="login()">Login</button>
-  <button ng-click="register()">Register</button>
+<section id="login-page">
+  <h3>Login or Register</h3>
+  <div class="container">
+
+	  <div class="row">
+			<div class="col-md-4 filler"></div>
+		  <div class="col-md-2 login-label">
+		    Email:
+		  </div> 
+			<div class="col-md-2">
+		    <input type="text" id="email-input" ng-model="account.email">
+			</div>
+		  <div class="col-md-4 filler"></div>
+		</div> <!-- END .row -->
+
+		<div class="row">
+		  <div class="col-md-4 filler"></div>
+		  <div class="col-md-2 login-label">
+		    Password: 
+			</div>
+			<div class="col-md-2">
+		    <input type="password" ng-model="account.password" ng-enter="login()">
+		  </div>
+		  <div class="col-md-4 filler"></div>
+		</div>
+
+		<div class="row">
+		  <div class="login-buttons">
+			  <button ng-click="login()">Login</button>
+			  <button ng-click="register()">Register</button>
+		  </div>
+		</div>
+
+	</div> <!-- END .container -->
 </section>

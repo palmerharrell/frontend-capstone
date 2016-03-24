@@ -1,3 +1,12 @@
+#login-page {
+  text-align: center; }
+  #login-page .filler,
+  #login-page .login-label {
+    border: 1px dashed royalblue;
+    height: 40px;
+    line-height: 40px;
+    text-align: right; }
+
 .page-head div {
   height: 60px;
   line-height: 60px;
