@@ -114,11 +114,11 @@ app.controller("frontCtrl", [
     // set value of input to current property value
     $scope.editMode = function(propName) {
       $scope.editProp[propName] = this.item[propName];
-    }
+    };
 
     $scope.cancelEdit = function() {
       $scope.loadFromFirebase(); // Reload Firebase db
-    }
+    };
 
     $scope.editProperty = function(propToChange, newVal) {
       var ref = new Firebase(firebaseURL + '/items/' + this.item.id);
@@ -139,10 +139,10 @@ app.controller("frontCtrl", [
 
 
     // TEST edit finished with checkbox
-    $scope.editFinished = function(propToChange, newVal) {
-      console.log("propToChnage: ", propToChange);
-      console.log("newVal: ", newVal);
-    };
+    // $scope.editFinished = function(propToChange, newVal) {
+    //   console.log("propToChnage: ", propToChange);
+    //   console.log("newVal: ", newVal);
+    // };
 
 
 
