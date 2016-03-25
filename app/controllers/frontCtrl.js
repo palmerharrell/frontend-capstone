@@ -20,7 +20,6 @@ app.controller("frontCtrl", [
       name: "",
       recommended: "",
       notes: ""
-      // finished: false
     };
 
     $scope.newItem = {
@@ -137,30 +136,11 @@ app.controller("frontCtrl", [
       });
     };
 
-
-    // TEST edit finished with checkbox
-    // $scope.editFinished = function(propToChange, newVal) {
-    //   console.log("propToChnage: ", propToChange);
-    //   console.log("newVal: ", newVal);
-    // };
-
-
-
     $scope.loadFromFirebase(); // Get list on page load
     $("#name-input").focus(); // Set focus to new item inputs
     $("#logout-link").show(); // Show logout link
 
   }
-
 ]);
-
-
-
-
-
-
-
-
-
 
 
