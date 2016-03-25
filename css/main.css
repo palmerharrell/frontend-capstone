@@ -1,3 +1,18 @@
+#all-filter {
+  background-color: #fff9f0; }
+
+#movie-filter {
+  background-color: #d9ceec; }
+
+#show-filter {
+  background-color: #cce5d3; }
+
+#music-filter {
+  background-color: #f0ddeb; }
+
+#book-filter {
+  background-color: #eec2df; }
+
 body {
   font-size: 1.3em; }
 
@@ -6,10 +21,6 @@ body {
 
 .list-item:nth-child(even) {
   background-color: #f2efe8; }
-
-.list-item,
-.new-item {
-  border: 1px dashed royalblue; }
 
 #login-page {
   margin-top: 10%;

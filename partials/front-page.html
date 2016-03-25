@@ -8,12 +8,12 @@
 	</div>
 	
 	<div class="row media-filters">
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = ''">All</div>
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'movie'">Movies</div>
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'show'">TV Shows</div>
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'music'">Music</div>
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'book'">Books</div>
-		<div class="col-md-2 hand" ng-click="selectedFilters.type = 'game'">Video Games</div>
+		<div class="col-md-2 hand" id="all-filter" ng-click="selectedFilters.type = ''">All</div>
+		<div class="col-md-2 hand" id="movie-filter" ng-click="selectedFilters.type = 'movie'">Movies</div>
+		<div class="col-md-2 hand" id="show-filter" ng-click="selectedFilters.type = 'show'">TV Shows</div>
+		<div class="col-md-2 hand" id="music-filter" ng-click="selectedFilters.type = 'music'">Music</div>
+		<div class="col-md-2 hand" id="book-filter" ng-click="selectedFilters.type = 'book'">Books</div>
+		<div class="col-md-2 hand" id="game-filter" ng-click="selectedFilters.type = 'game'">Video Games</div>
 	</div> <!-- END Filter rows -->
 
 	<div class="row list-headers">
