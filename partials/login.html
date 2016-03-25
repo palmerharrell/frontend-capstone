@@ -19,16 +19,22 @@
 		    Password: 
 			</div>
 			<div class="col-md-2">
-		    <input type="password" ng-model="account.password" ng-enter="login()">
+		    <input type="password" id="pword-input" ng-model="account.password" ng-enter="login()">
 		  </div>
 		  <div class="col-md-4 filler"></div>
-		</div>
+		</div> <!-- END .row -->
 
 		<div class="row">
-		  <div class="login-buttons">
+			<div class="col-md-4 filler"></div>
+		  <!-- <div class="login-button"> -->
+		  <div class="col-md-2 login-button">
+			</div>
+			<div class="col-md-2 login-button">
 			  <button ng-click="login()">Login</button>
 			  <button ng-click="register()">Register</button>
-		  </div>
+			</div>
+			<div class="col-md-4 filler"></div>
+		  </div> <!-- END .row -->
 		</div>
 
 	</div> <!-- END .container -->

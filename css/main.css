@@ -1,11 +1,16 @@
 #login-page {
+  margin-top: 10%;
   text-align: center; }
-  #login-page .filler,
   #login-page .login-label {
-    border: 1px dashed royalblue;
+    text-align: right;
     height: 40px;
-    line-height: 40px;
-    text-align: right; }
+    line-height: 40px; }
+  #login-page .login-button {
+    text-align: center; }
+  #login-page #email-input,
+  #login-page #pword-input {
+    width: 100%;
+    padding: 5px; }
 
 .page-head div {
   height: 60px;
