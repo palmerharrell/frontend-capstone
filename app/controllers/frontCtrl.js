@@ -20,6 +20,7 @@ app.controller("frontCtrl", [
       name: "",
       recommended: "",
       notes: ""
+      // finished: false
     };
 
     $scope.newItem = {
@@ -134,6 +135,13 @@ app.controller("frontCtrl", [
       function() {
         console.log("Promise Rejected");
       });
+    };
+
+
+    // TEST edit finished with checkbox
+    $scope.editFinished = function(propToChange, newVal) {
+      console.log("propToChnage: ", propToChange);
+      console.log("newVal: ", newVal);
     };
 
 

@@ -1,9 +1,6 @@
 body {
   font-size: 1.3em; }
 
-.row div {
-  border: 1px dashed royalblue; }
-
 .list-item {
   padding: 10px; }
 
@@ -49,7 +46,8 @@ body {
 .list-headers {
   font-weight: bold; }
 
-.del-button {
+.del-button,
+.right {
   text-align: right; }
 
 .hand {

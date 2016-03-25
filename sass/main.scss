@@ -5,12 +5,12 @@ body {
 	font-size: 1.3em;
 }
 
-.row {
-	// padding: 0;
-	div {
-		border: 1px dashed royalblue;	
-	}
-}
+// .row {
+// 	// padding: 0;
+// 	div {
+// 		border: 1px dashed royalblue;	
+// 	}
+// }
 
 .list-item {
 	padding: 10px;
@@ -32,6 +32,10 @@ body {
  	// display: inline-block;
 	// vertical-align: middle;
 	// float: none;
+}
+
+.rating-star:hover {
+	
 }
 
 // END TEST STYLES
@@ -96,7 +100,8 @@ body {
 	font-weight: bold;
 }
 
-.del-button {
+.del-button,
+.right {
 	text-align: right;
 }
 
