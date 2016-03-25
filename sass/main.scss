@@ -5,11 +5,34 @@ body {
 	font-size: 1.3em;
 }
 
-// .row {
-// 	div {
-// 		border: 1px dashed royalblue;	
-// 	}
-// }
+.row {
+	// padding: 0;
+	div {
+		border: 1px dashed royalblue;	
+	}
+}
+
+.list-item {
+	padding: 10px;
+}
+
+.list-item,
+.new-item {
+	border: 1px dashed royalblue;
+}
+
+.data-cell {
+	// height: 45px;
+	// display: inline-block;
+	// line-height: 45px;
+	// display:table-cell;
+	// vertical-align: middle;
+	// display: flex;
+ // 	align-items: center;
+ 	// display: inline-block;
+	// vertical-align: middle;
+	// float: none;
+}
 
 // END TEST STYLES
 
@@ -64,7 +87,6 @@ body {
 }
 
 .list-headers,
-.list-item,
 .new-item {
 	// margin: 0 5px;
 	padding: 10px;
@@ -72,11 +94,6 @@ body {
 
 .list-headers {
 	font-weight: bold;
-}
-
-.list-item,
-.new-item {
-	border: 1px dashed royalblue;
 }
 
 .del-button {
