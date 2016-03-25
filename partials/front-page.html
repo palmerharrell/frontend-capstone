@@ -20,9 +20,9 @@
 		<div class="col-md-2">Name</div>
 		<div class="col-md-1">Type</div>
 		<div class="col-md-2">Recommended By</div>
-		<div class="col-md-4">Notes</div>
+		<div class="col-md-3">Notes</div>
 		<div class="col-md-1">Added</div>
-		<div class="col-md-1">Rating</div>
+		<div class="col-md-2">Rating</div>
 		<div class="col-md-1"></div> <!-- "Delete" column -->
 	</div> <!-- END Headings row -->
 
@@ -36,7 +36,6 @@
 		</div>
 
 		<!-- Type Column -->
-		<!-- <div class="col-md-1">{{ item.type }}</div> -->
 		<div class="col-md-1">
 			<span ng-click="editType = !editType; editMode('type')" ng-hide="editType">{{ item.type }}</span>
 			<select ng-show="editType" focus-on-show id="new-rec" ng-model="editProp.type" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-change="editProperty('type', editProp.type)">
@@ -49,7 +48,6 @@
 			</select>
 		</div>
 
-		
 		<!-- Recommended Column -->
 		<div class="col-md-2">
 			<span ng-click="editRec = !editRec; editMode('recommended')" ng-hide="editRec">{{ item.recommended }}</span>
@@ -57,13 +55,25 @@
 		</div>		
 
 		<!-- Notes Column -->
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<span ng-click="editNotes = !editNotes; editMode('notes')" ng-hide="editNotes">{{ item.notes }}</span>
 			<input ng-show="editNotes" focus-on-show select-on-focus type="text" id="new-notes" ng-model="editProp.notes" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-enter="editProperty('notes', editProp.notes)">
 		</div>	
 
+		<!-- Date Column -->
 		<div class="col-md-1">{{ item.date | date:'MM/dd/yyyy'}}</div>
-		<div class="col-md-1">{{ item.rating }}</div>
+
+		<!-- Rating Column -->
+		<!-- <div class="col-md-1">{{ item.rating }}</div> -->
+		<div class="col-md-2">
+			<span class="glyphicon glyphicon-star"></span>
+			<span class="glyphicon glyphicon-star"></span>
+			<span class="glyphicon glyphicon-star"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+			<span class="glyphicon glyphicon-star-empty"></span>
+		</div>
+
+		<!-- Delete Column -->
 		<div class="col-md-1 del-button"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
 	</div>
 <!-- END ng-repeat .list-item -->
@@ -85,10 +95,10 @@
 		<div class="col-md-2">
 			<input type="text" id="recommended-input" ng-model="newItem.recommended" placeholder="Recommended By">
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<input type="text" id="notes-input" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-4">
 			<span ng-show="!newItem.notes" class="usage-tip"></span>
 			<span ng-show="newItem.notes" class="usage-tip">Press Enter to Save or Esc to Cancel</span>
 		</div> <!-- in place of Added, Rating, Delete columns -->

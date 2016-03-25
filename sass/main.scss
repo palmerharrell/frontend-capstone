@@ -1,3 +1,18 @@
+
+// TEST STYLES
+
+body {
+	font-size: 1.3em;
+}
+
+// .row {
+// 	div {
+// 		border: 1px dashed royalblue;	
+// 	}
+// }
+
+// END TEST STYLES
+
 #login-page {
 	margin-top: 10%;
 	text-align: center;
@@ -77,6 +92,5 @@
 #notes-input,
 #recommended-input,
 .usage-tip {
-	// width: 350px;
 	width: 100%;
 }
