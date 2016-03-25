@@ -4,6 +4,9 @@ body {
 .list-item {
   padding: 10px; }
 
+.list-item:nth-child(even) {
+  background-color: #f2efe8; }
+
 .list-item,
 .new-item {
   border: 1px dashed royalblue; }
