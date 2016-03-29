@@ -12,6 +12,30 @@
     width: 100%;
     padding: 5px; }
 
+.list-filters {
+  margin-bottom: 30px;
+  text-align: center; }
+  .list-filters div {
+    border: 1px dashed royalblue;
+    height: 40px;
+    line-height: 40px; }
+
+.media-filters {
+  text-align: center;
+  color: white;
+  font-weight: bold; }
+  .media-filters div {
+    border: 1px solid white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 40px;
+    line-height: 40px; }
+  .media-filters div:hover {
+    color: black; }
+
+.active-filter {
+  color: black; }
+
 #all-filter {
   background-color: #D53350; }
 
@@ -54,25 +78,11 @@
 #game-filter.active-filter {
   background-color: #CFD2E9; }
 
-.list-filters,
-.media-filters {
-  text-align: center; }
-  .list-filters div,
-  .media-filters div {
-    border: 1px dashed royalblue;
-    height: 40px;
-    line-height: 40px; }
+body {
+  background-color: #c2d4d8; }
 
-.media-filters {
-  color: white;
-  font-weight: bold;
-  margin-bottom: 30px; }
-
-.media-filters div:hover {
-  color: black; }
-
-.active-filter {
-  color: black; }
+.page-header {
+  border: none; }
 
 .page-head div {
   height: 60px;
@@ -87,10 +97,18 @@
   font-weight: bold; }
 
 .list-item {
-  padding: 10px; }
+  padding: 10px;
+  border: 1px solid white;
+  border-bottom: none; }
+
+.spreadsheet .row:last-of-type {
+  border-bottom: 1px solid white; }
 
 .list-item:nth-child(even) {
   background-color: #f2efe8; }
+
+.list-item:nth-child(odd) {
+  background-color: #dbe9d8; }
 
 #name-input,
 #type-select,

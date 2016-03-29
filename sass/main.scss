@@ -2,8 +2,24 @@
 @import 'login';
 @import 'filter-buttons';
 
-// body {
-// 	font-size: 1.3em;
+body {
+	// font-size: 1.3em;
+	// background-color: lightgray;
+	background-color: $bluish;
+}
+
+.page-header {
+	border: none;
+}
+
+.page-header {
+	div {
+		// background-color: green;
+	}
+}
+
+// .page-head {
+// 	background-color: green;
 // }
 
 .page-head {
@@ -12,6 +28,7 @@
 		height: 60px;
 		line-height: 60px;
 		text-align: center;
+		// background-color: red;
 	}
 }
 
@@ -27,12 +44,23 @@
 
 .list-item {
 	padding: 10px;
+	border: 1px solid white;
+	border-bottom: none;
+}
+
+.spreadsheet {
+	.row:last-of-type {
+		border-bottom: 1px solid white;
+	}
 }
 
 .list-item:nth-child(even) {
 	background-color: $light;
 }
 
+.list-item:nth-child(odd) {
+	background-color: $greenish;
+}
 
 #name-input,
 #type-select,
@@ -41,7 +69,6 @@
 .usage-tip {
 	width: 100%;
 }
-
 
 .right {
 	text-align: right;

@@ -1,4 +1,37 @@
 
+.list-filters {
+	margin-bottom: 30px;
+	text-align: center;
+	div {
+		border: 1px dashed royalblue;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+.media-filters {
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	// margin-bottom: 10px;
+	div {
+		// border: 1px dashed royalblue;
+		border: 1px solid white;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		height: 40px;
+		line-height: 40px;
+	}
+	div:hover {
+	color: black;
+	}
+}
+
+.active-filter {
+	color: black;
+}
+
+// Media Filter Buttons
 #all-filter {
 	background-color: $red-mid;
 }
@@ -47,29 +80,5 @@
 	background-color: $purple-light;
 }
 
-.list-filters,
-.media-filters {
-	text-align: center;
-	div {
-		border: 1px dashed royalblue;
-		height: 40px;
-		line-height: 40px;
-	}
-}
 
-.media-filters {
-	color: white;
-	font-weight: bold;
-	margin-bottom: 30px;
-}
-
-.media-filters {
-	div:hover {
-	color: black;
-	}
-}
-
-.active-filter {
-	color: black;
-}
 
