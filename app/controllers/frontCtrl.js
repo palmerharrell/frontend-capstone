@@ -136,6 +136,19 @@ app.controller("frontCtrl", [
       });
     };
 
+    $scope.filterButtonClasses = function(e) {
+      var clickedButtonId = `#${e.target.id}`;
+      // remove .active-filter from all .filter-button
+      var filterButtons = $(".filter-button");
+      for (var i = 0; i < filterButtons.length; i++) {
+        var currentButton = filterButtons[i];
+        $(currentButton).removeClass("active-filter");
+      };
+      // add .active-filter to clicked button
+      $(clickedButtonId).addClass("active-filter");
+    }
+
+
     $scope.loadFromFirebase(); // Get list on page load
     $("#name-input").focus(); // Set focus to new item inputs
     $("#logout-link").show(); // Show logout link

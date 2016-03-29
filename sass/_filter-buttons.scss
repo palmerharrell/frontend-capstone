@@ -1,44 +1,50 @@
 
 #all-filter {
-	background-color: $red-light;
-}
-#all-filter:hover {
 	background-color: $red-mid;
+}
+#all-filter:hover,
+#all-filter.active-filter {
+	background-color: $red-light;
 }
 
 #movie-filter {
-	background-color: $orange-light;
-}
-#movie-filter:hover {
 	background-color: $orange-mid;
+}
+#movie-filter:hover,
+#movie-filter.active-filter {
+	background-color: $orange-light;
 }
 
 #show-filter {
-	background-color: $pink-light;
-}
-#show-filter:hover {
 	background-color: $pink-mid;
+}
+#show-filter:hover,
+#show-filter.active-filter {
+	background-color: $pink-light;
 }
 
 #music-filter {
-	background-color: $green-light;
-}
-#music-filter:hover {
 	background-color: $green-mid;
+}
+#music-filter:hover,
+#music-filter.active-filter {
+	background-color: $green-light;
 }
 
 #book-filter {
-	background-color: $blue-light;
-}
-#book-filter:hover {
 	background-color: $blue-mid;
+}
+#book-filter:hover,
+#book-filter.active-filter {
+	background-color: $blue-light;
 }
 
 #game-filter {
-	background-color: $purple-light;
-}
-#game-filter:hover {
 	background-color: $purple-mid;
+}
+#game-filter:hover,
+#game-filter.active-filter {
+	background-color: $purple-light;
 }
 
 .list-filters,
@@ -52,19 +58,18 @@
 }
 
 .media-filters {
+	color: white;
 	font-weight: bold;
 	margin-bottom: 30px;
 }
 
 .media-filters {
 	div:hover {
-	color: white;
+	color: black;
 	}
 }
 
-.media-filters {
-	.active {
-		color: white;
-	}
+.active-filter {
+	color: black;
 }
 

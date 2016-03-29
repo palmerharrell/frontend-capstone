@@ -8,12 +8,12 @@
 	</div>
 	
 	<div class="row media-filters">
-		<div class="col-md-2 hand active" id="all-filter" ng-click="selectedFilters.type = ''">All</div>
-		<div class="col-md-2 hand" id="movie-filter" ng-click="selectedFilters.type = 'movie'">Movies</div>
-		<div class="col-md-2 hand" id="show-filter" ng-click="selectedFilters.type = 'show'">TV Shows</div>
-		<div class="col-md-2 hand" id="music-filter" ng-click="selectedFilters.type = 'music'">Music</div>
-		<div class="col-md-2 hand" id="book-filter" ng-click="selectedFilters.type = 'book'">Books</div>
-		<div class="col-md-2 hand" id="game-filter" ng-click="selectedFilters.type = 'game'">Video Games</div>
+		<div class="col-md-2 hand filter-button active-filter" id="all-filter" ng-click="selectedFilters.type = ''; filterButtonClasses($event)">All</div>
+		<div class="col-md-2 hand filter-button" id="movie-filter" ng-click="selectedFilters.type = 'movie'; filterButtonClasses($event)">Movies</div>
+		<div class="col-md-2 hand filter-button" id="show-filter" ng-click="selectedFilters.type = 'show'; filterButtonClasses($event)">TV Shows</div>
+		<div class="col-md-2 hand filter-button" id="music-filter" ng-click="selectedFilters.type = 'music'; filterButtonClasses($event)">Music</div>
+		<div class="col-md-2 hand filter-button" id="book-filter" ng-click="selectedFilters.type = 'book'; filterButtonClasses($event)">Books</div>
+		<div class="col-md-2 hand filter-button" id="game-filter" ng-click="selectedFilters.type = 'game'; filterButtonClasses($event)">Video Games</div>
 	</div> <!-- END Filter rows -->
 
 	<div class="row list-headers">

@@ -13,40 +13,46 @@
     padding: 5px; }
 
 #all-filter {
-  background-color: #F26161; }
-
-#all-filter:hover {
   background-color: #D53350; }
 
-#movie-filter {
-  background-color: #F8A96F; }
+#all-filter:hover,
+#all-filter.active-filter {
+  background-color: #F26161; }
 
-#movie-filter:hover {
+#movie-filter {
   background-color: #F48340; }
 
-#show-filter {
-  background-color: #FBDEEB; }
+#movie-filter:hover,
+#movie-filter.active-filter {
+  background-color: #F8A96F; }
 
-#show-filter:hover {
+#show-filter {
   background-color: #F390BC; }
 
-#music-filter {
-  background-color: #C4E5D4; }
+#show-filter:hover,
+#show-filter.active-filter {
+  background-color: #FBDEEB; }
 
-#music-filter:hover {
+#music-filter {
   background-color: #4FC0A1; }
 
-#book-filter {
-  background-color: #C5DEF3; }
+#music-filter:hover,
+#music-filter.active-filter {
+  background-color: #C4E5D4; }
 
-#book-filter:hover {
+#book-filter {
   background-color: #178FBF; }
 
-#game-filter {
-  background-color: #CFD2E9; }
+#book-filter:hover,
+#book-filter.active-filter {
+  background-color: #C5DEF3; }
 
-#game-filter:hover {
+#game-filter {
   background-color: #A57AB4; }
+
+#game-filter:hover,
+#game-filter.active-filter {
+  background-color: #CFD2E9; }
 
 .list-filters,
 .media-filters {
@@ -58,14 +64,15 @@
     line-height: 40px; }
 
 .media-filters {
+  color: white;
   font-weight: bold;
   margin-bottom: 30px; }
 
 .media-filters div:hover {
-  color: white; }
+  color: black; }
 
-.media-filters .active {
-  color: white; }
+.active-filter {
+  color: black; }
 
 .page-head div {
   height: 60px;
