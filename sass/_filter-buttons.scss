@@ -1,0 +1,70 @@
+
+#all-filter {
+	background-color: $red-light;
+}
+#all-filter:hover {
+	background-color: $red-mid;
+}
+
+#movie-filter {
+	background-color: $orange-light;
+}
+#movie-filter:hover {
+	background-color: $orange-mid;
+}
+
+#show-filter {
+	background-color: $pink-light;
+}
+#show-filter:hover {
+	background-color: $pink-mid;
+}
+
+#music-filter {
+	background-color: $green-light;
+}
+#music-filter:hover {
+	background-color: $green-mid;
+}
+
+#book-filter {
+	background-color: $blue-light;
+}
+#book-filter:hover {
+	background-color: $blue-mid;
+}
+
+#game-filter {
+	background-color: $purple-light;
+}
+#game-filter:hover {
+	background-color: $purple-mid;
+}
+
+.list-filters,
+.media-filters {
+	text-align: center;
+	div {
+		border: 1px dashed royalblue;
+		height: 40px;
+		line-height: 40px;
+	}
+}
+
+.media-filters {
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.media-filters {
+	div:hover {
+	color: white;
+	}
+}
+
+.media-filters {
+	.active {
+		color: white;
+	}
+}
+

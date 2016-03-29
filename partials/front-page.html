@@ -8,7 +8,7 @@
 	</div>
 	
 	<div class="row media-filters">
-		<div class="col-md-2 hand" id="all-filter" ng-click="selectedFilters.type = ''">All</div>
+		<div class="col-md-2 hand active" id="all-filter" ng-click="selectedFilters.type = ''">All</div>
 		<div class="col-md-2 hand" id="movie-filter" ng-click="selectedFilters.type = 'movie'">Movies</div>
 		<div class="col-md-2 hand" id="show-filter" ng-click="selectedFilters.type = 'show'">TV Shows</div>
 		<div class="col-md-2 hand" id="music-filter" ng-click="selectedFilters.type = 'music'">Music</div>
@@ -78,7 +78,7 @@
 		</div>
 
 		<!-- Delete Column -->
-		<div class="col-md-1 del-button data-cell"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
+		<div class="col-md-1 del-button data-cell right"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
 	</div>
 <!-- END ng-repeat .list-item -->
 

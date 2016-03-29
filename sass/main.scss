@@ -1,162 +1,10 @@
-// $purplish: #b0aac2;
-// $light: #f2efe8;
-// $bluish: #c2d4d8;
-// $greenish: #dbe9d8;
-// $grayish: #ebebeb;
+@import 'colors';
+@import 'login';
+@import 'filter-buttons';
 
-// $color-primary-0: #605085;
-// $color-primary-1: #9F96B6;
-// $color-primary-2: #7D6F9B;
-// $color-primary-3: #493872;
-// $color-primary-4: #36255F;
-
-// $color-secondary-1-0: #94527F;
-// $color-secondary-1-1: #C8A1BB;
-// $color-secondary-1-2: #AD769B;
-// $color-secondary-1-3: #7F3767;
-// $color-secondary-1-4: #6A2152;
-
-// $color-secondary-2-0: #A1B766;
-// $color-secondary-2-1: #E5F2C2;
-// $color-secondary-2-2: #C3D692;
-// $color-secondary-2-3: #849D44;
-// $color-secondary-2-4: #6A8329;
-
-// $color-complement-0: #C2B56C;
-// $color-complement-1: #FFF8CD;
-// $color-complement-2: #E3D89B;
-// $color-complement-3: #A69848;
-// $color-complement-4: #8B7D2C;
-
-// Red
-$red-light: #F26161;
-$red-mid: #D53350;
-$red-dark: #7D1F3D;
-
-// Orange
-$orange-light: #F8A96F;
-$orange-mid: #F48340;
-$orange-dark: #9D4D38;
-
-// Yellow
-$yellow-light: #FEE898;
-$yellow-mid: #FEDD60;
-$yellow-dark: #AC7A2A;
-
-// Green
-$green-light: #C4E5D4;
-$green-mid: #4FC0A1;
-$green-dark: #1B5056;
-
-// Blue
-$blue-light: #C5DEF3;
-$blue-mid: #178FBF;
-$blue-dark: #355688;
-
-// Purple
-$purple-light: #CFD2E9;
-$purple-mid: #A57AB4;
-$purple-dark: #6A3872;
-
-// Pink
-$pink-light: #FBDEEB;
-$pink-mid: #F390BC;
-$pink-dark: #A44F6C;
-
-
-
-
-// Pastels
-$purple1: #d9ceec;
-$green1: #cce5d3;
-$pink1: #f0ddeb;
-$pink2: #eec2df;
-$cream1: #fff9f0;
-
-// TEST STYLES
-
-#all-filter {
-	background-color: $cream1;
-}
-
-#movie-filter {
-	background-color: $purple1;
-}
-
-#show-filter {
-	background-color: $green1;
-}
-
-#music-filter {
-	background-color: $pink1;
-}
-
-#book-filter {
-	background-color: $pink2;
-}
-
-// html,
 // body {
-// 	// font-size: 1.3em;
-// 	// background-color: $color-complement-2;
-// 	// color: $light;
+// 	font-size: 1.3em;
 // }
-
-body {
-	font-size: 1.3em;
-}
-
-// .row {
-// 	// padding: 0;
-// 	div {
-// 		border: 1px dashed royalblue;	
-// 	}
-// }
-
-.list-item {
-	padding: 10px;
-}
-
-.list-item:nth-child(even) {
-	// background-color: $grayish;
-	// background-color: $greenish;
-	// background-color: $bluish;
-	background-color: $light;
-}
-
-// .list-item,
-// .new-item {
-// 	border: 1px dashed royalblue;
-// }
-
-// END TEST STYLES
-
-#login-page {
-	margin-top: 10%;
-	text-align: center;
-	.filler {
-		// border: 1px dashed royalblue;
-		// height: 30px;
-	}
-	.login-label {
-		text-align: right;
-		// border: 1px dashed royalblue;
-		height: 40px;
-		line-height: 40px;
-	}
-	.login-button {
-		// line-height: 40px;
-		text-align: center;
-	}
-	#email-input,
-	#pword-input {
-		// border: 1px dashed royalblue;
-		width: 100%;
-		// height: 40px;
-		padding: 5px;
-		// line-height: 30px;
-	}
-}
 
 .page-head {
 	div {
@@ -165,20 +13,6 @@ body {
 		line-height: 60px;
 		text-align: center;
 	}
-}
-
-.list-filters,
-.media-filters {
-	text-align: center;
-	div {
-		border: 1px dashed royalblue;
-		height: 40px;
-		line-height: 40px;
-	}
-}
-
-.media-filters {
-	margin-bottom: 30px;
 }
 
 .list-headers,
@@ -191,14 +25,14 @@ body {
 	font-weight: bold;
 }
 
-.del-button,
-.right {
-	text-align: right;
+.list-item {
+	padding: 10px;
 }
 
-.hand {
-    cursor: pointer;
+.list-item:nth-child(even) {
+	background-color: $light;
 }
+
 
 #name-input,
 #type-select,
@@ -207,3 +41,13 @@ body {
 .usage-tip {
 	width: 100%;
 }
+
+
+.right {
+	text-align: right;
+}
+
+.hand {
+    cursor: pointer;
+}
+
