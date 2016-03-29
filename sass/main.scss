@@ -48,12 +48,14 @@ body {
 	padding: 10px;
 	border: 1px solid white;
 	border-bottom: none;
-	input {
+	input,
+	select {
 		border: none;
-		// margin: none;
-		// padding: none;
-		// position: relative;
 		height: 20px;
+	}
+	select {
+		position: relative;
+		left: -10px;
 	}
 	input:focus,
 	select:focus {

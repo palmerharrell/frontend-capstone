@@ -102,9 +102,13 @@ body {
   padding: 10px;
   border: 1px solid white;
   border-bottom: none; }
-  .list-item input {
+  .list-item input,
+  .list-item select {
     border: none;
     height: 20px; }
+  .list-item select {
+    position: relative;
+    left: -10px; }
   .list-item input:focus,
   .list-item select:focus {
     outline: none; }
