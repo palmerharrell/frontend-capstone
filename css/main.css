@@ -89,15 +89,22 @@ body {
   line-height: 60px;
   text-align: center; }
 
-.list-headers,
 .new-item {
   padding: 10px; }
 
 .list-headers {
   font-weight: bold;
+  height: 20px;
   border-left: 1px solid white;
   border-right: 1px solid white;
   background-color: white; }
+
+.type-header,
+.rec-header {
+  padding-left: 18px; }
+
+.name-header {
+  padding-left: 24px; }
 
 .list-item {
   padding: 10px 10px 6px;
@@ -164,7 +171,8 @@ body {
 
 .del-button {
   width: 5%;
-  float: right; }
+  float: right;
+  padding-right: 0; }
 
 .right {
   text-align: right; }

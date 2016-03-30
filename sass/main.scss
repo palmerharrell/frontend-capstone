@@ -32,7 +32,6 @@ body {
 	}
 }
 
-.list-headers,
 .new-item {
 	// margin: 0 5px;
 	padding: 10px;
@@ -40,11 +39,20 @@ body {
 
 .list-headers {
 	font-weight: bold;
-	// height: 30px;
+	height: 20px;
 	// line-height: 30px;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 	background-color: white;
+}
+
+.type-header,
+.rec-header {
+	padding-left: 18px;
+}
+
+.name-header{
+	padding-left: 24px;
 }
 
 .list-item {
@@ -63,7 +71,6 @@ body {
 		position: relative;
 		top: -1px;
 		left: -8px;
-
 	}
 	input:focus,
 	select:focus {
@@ -71,15 +78,34 @@ body {
 	}
 }
 
-// .data-cell {
-// 	vertical-align: middle; // NOT THIS!
-// }
-
 .spreadsheet {
+	// position: absolute;
+	// width: 100%;
+	// top: 40px;
+	// left: 0px;
+	// overflow-y: scroll;
 	.row:last-of-type {
 		border-bottom: 1px solid white;
 	}
 }
+
+
+// EXAMPLE SCROLLING DIV CODE
+// ​.header
+// {
+//     height:50px;
+// }
+// .content
+// {
+//     position:absolute;
+//     top: 50px;
+//     left:0px;
+//     right:0px;
+//     bottom:0px;
+//     overflow-y:scroll;        
+// }​
+// END EXAMPLE SCROLLING DIV CODE
+
 
 .finished-column {
 	width: 10px;
@@ -143,6 +169,7 @@ body {
 .del-button {
 	width: 5%;
 	float: right;
+	padding-right: 0;
 }
 
 .right {
