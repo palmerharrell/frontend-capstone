@@ -93,12 +93,12 @@
 		<div class="col-md-2">
 			<input type="text" id="recommended-input" ng-model="newItem.recommended" placeholder="Recommended By">
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 notes-div">
 			<input type="text" id="notes-input" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
 		</div>
-		<div class="col-md-2">
-			<span ng-show="!newItem.notes" class="usage-tip"></span>
-			<span ng-show="newItem.notes" class="usage-tip">Press Enter to Save or Esc to Cancel</span>
+		<div class="col-md-2 usage-tip">
+			<span ng-show="!newItem.notes"></span>
+			<span ng-show="newItem.notes">Press Enter to Save or Esc to Cancel</span>
 		</div> <!-- in place of Added and Delete columns -->
 
 	</div> <!-- END .new-item -->

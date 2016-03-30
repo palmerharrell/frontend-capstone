@@ -114,6 +114,9 @@ body {
   .list-item select:focus {
     outline: none; }
 
+.data-cell {
+  vertical-align: middle; }
+
 .spreadsheet .row:last-of-type {
   border-bottom: 1px solid white; }
 
@@ -127,12 +130,33 @@ body {
 .list-item:nth-child(odd) {
   background-color: #dbe9d8; }
 
-#name-input,
-#type-select,
-#notes-input,
-#recommended-input,
+#name-input {
+  position: relative;
+  left: 20px;
+  width: 90%; }
+
+#recommended-input {
+  position: relative;
+  left: 17px; }
+
+.notes-div {
+  margin-right: 0; }
+
+#notes-input {
+  position: relative;
+  left: 19px;
+  width: 80%; }
+
+#type-select {
+  position: relative;
+  left: 10px;
+  border: none;
+  height: 20px; }
+
 .usage-tip {
-  width: 100%; }
+  margin: 0;
+  padding: 0;
+  width: 250px; }
 
 .del-button {
   float: right; }

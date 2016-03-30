@@ -51,6 +51,7 @@ body {
 	padding: 10px;
 	border: 1px solid white;
 	border-bottom: none;
+	// line-height: 20px;
 	input,
 	select {
 		border: none;
@@ -64,6 +65,10 @@ body {
 	select:focus {
 		outline: none;
 	}
+}
+
+.data-cell {
+	vertical-align: middle; // NOT THIS!
 }
 
 .spreadsheet {
@@ -85,12 +90,41 @@ body {
 	background-color: $greenish;
 }
 
-#name-input,
-#type-select,
-#notes-input,
-#recommended-input,
+#name-input {
+	position: relative;
+	left: 20px;
+	width: 90%;
+}
+
+#recommended-input {
+	position: relative;
+	left: 17px;
+	// width: 100%;
+}
+
+.notes-div {
+	margin-right: 0;
+}
+
+#notes-input {
+	position: relative;
+	left: 19px;
+	width: 80%;
+}
+
+#type-select {
+	position: relative;
+	left: 10px;
+	border: none;
+	height: 20px;
+}
+
 .usage-tip {
-	width: 100%;
+	// width: 100%;
+	// font-size: 0.9em;
+	margin: 0;
+	padding: 0;
+	width: 250px;
 }
 
 .del-button {
