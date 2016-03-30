@@ -9,11 +9,11 @@
 	
 	<div class="row media-filters">
 		<div class="col-md-2 hand filter-button active-filter" id="all-filter" ng-click="selectedFilters.type = ''; filterButtonClasses($event)">All</div>
-		<div class="col-md-2 hand filter-button" id="movie-filter" ng-click="selectedFilters.type = 'movie'; filterButtonClasses($event)">Movies</div>
-		<div class="col-md-2 hand filter-button" id="show-filter" ng-click="selectedFilters.type = 'show'; filterButtonClasses($event)">TV Shows</div>
-		<div class="col-md-2 hand filter-button" id="music-filter" ng-click="selectedFilters.type = 'music'; filterButtonClasses($event)">Music</div>
-		<div class="col-md-2 hand filter-button" id="book-filter" ng-click="selectedFilters.type = 'book'; filterButtonClasses($event)">Books</div>
-		<div class="col-md-2 hand filter-button" id="game-filter" ng-click="selectedFilters.type = 'game'; filterButtonClasses($event)">Video Games</div>
+		<div class="col-md-2 hand filter-button" id="movie-filter" ng-click="selectedFilters.type = 'Movie'; filterButtonClasses($event)">Movies</div>
+		<div class="col-md-2 hand filter-button" id="show-filter" ng-click="selectedFilters.type = 'TV Show'; filterButtonClasses($event)">TV Shows</div>
+		<div class="col-md-2 hand filter-button" id="music-filter" ng-click="selectedFilters.type = 'Music'; filterButtonClasses($event)">Music</div>
+		<div class="col-md-2 hand filter-button" id="book-filter" ng-click="selectedFilters.type = 'Book'; filterButtonClasses($event)">Books</div>
+		<div class="col-md-2 hand filter-button" id="game-filter" ng-click="selectedFilters.type = 'Game'; filterButtonClasses($event)">Video Games</div>
 	</div> <!-- END Filter rows -->
 
 	<div class="row list-headers">
@@ -41,11 +41,11 @@
 				<span ng-click="editType = !editType; editMode('type')" ng-hide="editType">{{ item.type }}</span>
 				<select ng-show="editType" focus-on-show id="new-rec" ng-model="editProp.type" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-change="editProperty('type', editProp.type)">
 					<option value="" disabled ng-selected="true" disabled>Type</option>
-					<option value="movie">Movie</option>
-					<option value="show">TV Show</option>
-					<option value="music">Music</option>
-					<option value="book">Book</option>
-					<option value="game">Game</option>
+					<option value="Movie">Movie</option>
+					<option value="TV Show">TV Show</option>
+					<option value="Music">Music</option>
+					<option value="Book">Book</option>
+					<option value="Game">Game</option>
 				</select>
 			</div>
 
@@ -64,16 +64,7 @@
 			<!-- Date Column -->
 			<div class="col-md-1 data-cell">{{ item.date | date:'MM/dd/yyyy'}}</div>
 
-			<!-- Rating Column -->
-			<!-- <div class="col-md-1">{{ item.rating }}</div> -->
-			<!-- <div class="col-md-2 data-cell">
-				<span class="rating-star glyphicon glyphicon-star"></span>
-				<span class="rating-star glyphicon glyphicon-star"></span>
-				<span class="rating-star glyphicon glyphicon-star"></span>
-				<span class="rating-star glyphicon glyphicon-star-empty"></span>
-				<span class="rating-star glyphicon glyphicon-star-empty"></span>
-			</div> -->
-			<!-- <div class="col-md-1">{{ item.finished }}</div> -->
+			<!-- Finished Column -->
 			<div class="col-md-1">
 				<input type="checkbox" ng-checked="item.finished==true" ng-click="editProperty('finished', !item.finished)">
 			</div>
@@ -91,11 +82,11 @@
 		<div class="col-md-1">
 			<select name="typeSelect" id="type-select" ng-model="newItem.type">
 				<option value="" disabled ng-selected="true" disabled>Type</option>
-				<option value="movie">Movie</option>
-				<option value="show">TV Show</option>
-				<option value="music">Music</option>
-				<option value="book">Book</option>
-				<option value="game">Game</option>
+				<option value="Movie">Movie</option>
+				<option value="TV Show">TV Show</option>
+				<option value="Music">Music</option>
+				<option value="Book">Book</option>
+				<option value="Game">Game</option>
 			</select>
 		</div>
 		<div class="col-md-2">
@@ -107,7 +98,7 @@
 		<div class="col-md-3">
 			<span ng-show="!newItem.notes" class="usage-tip"></span>
 			<span ng-show="newItem.notes" class="usage-tip">Press Enter to Save or Esc to Cancel</span>
-		</div> <!-- in place of Added, Rating, Delete columns -->
+		</div> <!-- in place of Added, Finished, Delete columns -->
 
 	</div> <!-- END .new-item -->
 

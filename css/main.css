@@ -96,7 +96,8 @@ body {
 .list-headers {
   font-weight: bold;
   border-left: 1px solid white;
-  border-right: 1px solid white; }
+  border-right: 1px solid white;
+  background-color: white; }
 
 .list-item {
   padding: 10px;
