@@ -97,7 +97,8 @@ body {
   height: 20px;
   border-left: 1px solid white;
   border-right: 1px solid white;
-  background-color: white; }
+  color: white;
+  background-color: black; }
 
 .type-header,
 .rec-header {
@@ -135,11 +136,13 @@ body {
 .notes-header {
   width: 400px; }
 
-.list-item:nth-child(even) {
-  background-color: #f2efe8; }
+.book-item {
+  background-color: white;
+  color: red; }
 
-.list-item:nth-child(odd) {
-  background-color: #dbe9d8; }
+.show-item {
+  background-color: #FBDEEB;
+  color: green; }
 
 #name-input {
   position: relative;

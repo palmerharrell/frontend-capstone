@@ -43,7 +43,8 @@ body {
 	// line-height: 30px;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
-	background-color: white;
+	color: white;
+	background-color: black;
 }
 
 .type-header,
@@ -120,13 +121,32 @@ body {
 	width: 400px;
 }
 
-.list-item:nth-child(even) {
-	background-color: $light;
+// ALTERNATING ROW COLORS
+// .list-item:nth-child(even) {
+// 	background-color: $light;
+// }
+
+// .list-item:nth-child(odd) {
+// 	background-color: $greenish;
+// }
+// END ALTERNATING ROW COLORS
+
+
+
+// ROW COLOR BY MEDIA TYPE
+.book-item {
+	background-color: white;
+	color: red;
+	// color: white;
 }
 
-.list-item:nth-child(odd) {
-	background-color: $greenish;
+.show-item {
+	background-color: $pink-light;
+	color: green;
 }
+
+
+
 
 #name-input {
 	position: relative;

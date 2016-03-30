@@ -143,10 +143,26 @@ app.controller("frontCtrl", [
       for (var i = 0; i < filterButtons.length; i++) {
         var currentButton = filterButtons[i];
         $(currentButton).removeClass("active-filter");
-      };
+      }
       // add .active-filter to clicked button
       $(clickedButtonId).addClass("active-filter");
-    }
+    };
+
+    $scope.applyClass = function(item) {
+      if (item.type === "Book") {
+        return "book-item";
+      } else if (item.type === "Movie") {
+        return "movie-item";
+      } else if (item.type === "TV Show") {
+        return "show-item";
+      } else if (item.type === "Music") {
+        return "music-item";
+      } else if (item.type === "Game") {
+        return "game-item";
+      } else {
+        return "";
+      }
+    };
 
 
     $scope.loadFromFirebase(); // Get list on page load
