@@ -69,9 +69,9 @@ body {
 	}
 }
 
-.data-cell {
-	vertical-align: middle; // NOT THIS!
-}
+// .data-cell {
+// 	vertical-align: middle; // NOT THIS!
+// }
 
 .spreadsheet {
 	.row:last-of-type {
@@ -85,6 +85,11 @@ body {
 	input {
 		margin-top: 0;
 	}
+}
+
+.notes-column,
+.notes-header {
+	width: 400px;
 }
 
 .list-item:nth-child(even) {
@@ -121,7 +126,8 @@ body {
 	position: relative;
 	left: 10px;
 	border: none;
-	height: 20px;
+	margin-top: 3px;
+	// height: 20px;
 }
 
 .usage-tip {
@@ -133,6 +139,7 @@ body {
 }
 
 .del-button {
+	width: 5%;
 	float: right;
 }
 

@@ -21,7 +21,7 @@
 		<div class="col-md-3">Name</div>
 		<div class="col-md-1">Type</div>
 		<div class="col-md-2">Recommended By</div>
-		<div class="col-md-3">Notes</div>
+		<div class="col-md-3 notes-header">Notes</div>
 		<div class="col-md-1">Added</div>
 		<div class="col-md-1 right"><!-- Delete --></div>
 	</div> <!-- END Headings row -->
@@ -61,7 +61,7 @@
 			</div>		
 
 			<!-- Notes Column -->
-			<div class="col-md-3 data-cell">
+			<div class="col-md-3 data-cell notes-column">
 				<span ng-click="editNotes = !editNotes; editMode('notes')" ng-hide="editNotes">{{ item.notes }}</span>
 				<input ng-show="editNotes" focus-on-show select-on-focus type="text" id="new-notes" ng-model="editProp.notes" ng-esc="cancelEdit()" ng-blur="cancelEdit()" ng-enter="editProperty('notes', editProp.notes)">
 			</div>	

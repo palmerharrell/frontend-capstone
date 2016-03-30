@@ -114,9 +114,6 @@ body {
   .list-item select:focus {
     outline: none; }
 
-.data-cell {
-  vertical-align: middle; }
-
 .spreadsheet .row:last-of-type {
   border-bottom: 1px solid white; }
 
@@ -125,6 +122,10 @@ body {
   padding-left: 5px; }
   .finished-column input {
     margin-top: 0; }
+
+.notes-column,
+.notes-header {
+  width: 400px; }
 
 .list-item:nth-child(even) {
   background-color: #f2efe8; }
@@ -153,7 +154,7 @@ body {
   position: relative;
   left: 10px;
   border: none;
-  height: 20px; }
+  margin-top: 3px; }
 
 .usage-tip {
   margin: 0;
@@ -161,6 +162,7 @@ body {
   width: 250px; }
 
 .del-button {
+  width: 5%;
   float: right; }
 
 .right {
