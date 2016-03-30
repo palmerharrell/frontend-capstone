@@ -17,12 +17,12 @@
 	</div> <!-- END Filter rows -->
 
 	<div class="row list-headers">
+		<div class="col-md-1 finished-column"><!-- Finished --></div>
 		<div class="col-md-3">Name</div>
 		<div class="col-md-1">Type</div>
 		<div class="col-md-2">Recommended By</div>
 		<div class="col-md-3">Notes</div>
 		<div class="col-md-1">Added</div>
-		<div class="col-md-1"><!-- Finished --></div>
 		<div class="col-md-1 right"><!-- Delete --></div>
 	</div> <!-- END Headings row -->
 
@@ -30,6 +30,11 @@
 	<!-- START ng-repeat .list-item -->
 		<div class="row list-item" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: 'date'">
 			
+			<!-- Finished Column -->
+			<div class="col-md-1 finished-column">
+				<input type="checkbox" ng-checked="item.finished==true" ng-click="editProperty('finished', !item.finished)">
+			</div>
+
 			<!-- Name Column -->
 			<div class="col-md-3 data-cell">
 				<span ng-click="editName = !editName; editMode('name')" ng-hide="editName">{{ item.name }}</span>
@@ -63,18 +68,14 @@
 
 			<!-- Date Column -->
 			<div class="col-md-1 data-cell">{{ item.date | date:'MM/dd/yyyy'}}</div>
-
-			<!-- Finished Column -->
-			<div class="col-md-1">
-				<input type="checkbox" ng-checked="item.finished==true" ng-click="editProperty('finished', !item.finished)">
-			</div>
-
+			
 			<!-- Delete Column -->
 			<div class="col-md-1 del-button data-cell right"><span class="glyphicon glyphicon-remove hand" ng-click="deleteItem()"></span></div>
 		</div>
 	<!-- END ng-repeat .list-item -->
 	</div>
 
+	<div class="col-md-1 finished-column"><!-- Finished Column--></div>
 	<div class="row new-item">
 		<div class="col-md-3">
 			<input type="text" id="name-input" ng-model="newItem.name" placeholder="Name" id="name-field">
@@ -95,10 +96,10 @@
 		<div class="col-md-3">
 			<input type="text" id="notes-input" ng-model="newItem.notes" ng-enter="addNewItem()" ng-esc="cancelAdd()" placeholder="Notes">
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-2">
 			<span ng-show="!newItem.notes" class="usage-tip"></span>
 			<span ng-show="newItem.notes" class="usage-tip">Press Enter to Save or Esc to Cancel</span>
-		</div> <!-- in place of Added, Finished, Delete columns -->
+		</div> <!-- in place of Added and Delete columns -->
 
 	</div> <!-- END .new-item -->
 

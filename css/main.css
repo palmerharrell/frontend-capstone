@@ -117,6 +117,10 @@ body {
 .spreadsheet .row:last-of-type {
   border-bottom: 1px solid white; }
 
+.finished-column {
+  width: 10px;
+  padding-left: 5px; }
+
 .list-item:nth-child(even) {
   background-color: #f2efe8; }
 
@@ -129,6 +133,9 @@ body {
 #recommended-input,
 .usage-tip {
   width: 100%; }
+
+.del-button {
+  float: right; }
 
 .right {
   text-align: right; }

@@ -72,6 +72,11 @@ body {
 	}
 }
 
+.finished-column {
+	width: 10px;
+	padding-left: 5px;
+}
+
 .list-item:nth-child(even) {
 	background-color: $light;
 }
@@ -86,6 +91,10 @@ body {
 #recommended-input,
 .usage-tip {
 	width: 100%;
+}
+
+.del-button {
+	float: right;
 }
 
 .right {
