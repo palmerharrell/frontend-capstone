@@ -79,7 +79,7 @@
   background-color: #CFD2E9; }
 
 body {
-  background-color: #c2d4d8; }
+  background-color: #f2efe8; }
 
 .page-header {
   border: none; }
@@ -137,12 +137,19 @@ body {
   width: 400px; }
 
 .book-item {
-  background-color: white;
-  color: red; }
+  background-color: #C5DEF3; }
 
 .show-item {
-  background-color: #FBDEEB;
-  color: green; }
+  background-color: #FBDEEB; }
+
+.movie-item {
+  background-color: #F8A96F; }
+
+.music-item {
+  background-color: #C4E5D4; }
+
+.game-item {
+  background-color: #CFD2E9; }
 
 #name-input {
   position: relative;

@@ -5,7 +5,8 @@
 body {
 	// font-size: 1.3em;
 	// background-color: lightgray;
-	background-color: $bluish;
+	// background-color: $bluish;
+	background-color: $light;
 }
 
 .page-header {
@@ -135,16 +136,24 @@ body {
 
 // ROW COLOR BY MEDIA TYPE
 .book-item {
-	background-color: white;
-	color: red;
-	// color: white;
+	background-color: $blue-light;
 }
 
 .show-item {
 	background-color: $pink-light;
-	color: green;
 }
 
+.movie-item {
+	background-color: $orange-light;
+}
+
+.music-item {
+	background-color: $green-light;
+}
+
+.game-item {
+	background-color: $purple-light;
+}
 
 
 
