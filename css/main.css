@@ -109,7 +109,8 @@ body {
     height: 20px; }
   .list-item select {
     position: relative;
-    left: -10px; }
+    top: -1px;
+    left: -8px; }
   .list-item input:focus,
   .list-item select:focus {
     outline: none; }
