@@ -100,7 +100,7 @@ body {
   background-color: white; }
 
 .list-item {
-  padding: 10px;
+  padding: 10px 10px 6px;
   border: 1px solid white;
   border-bottom: none; }
   .list-item input,
@@ -123,6 +123,8 @@ body {
 .finished-column {
   width: 10px;
   padding-left: 5px; }
+  .finished-column input {
+    margin-top: 0; }
 
 .list-item:nth-child(even) {
   background-color: #f2efe8; }
