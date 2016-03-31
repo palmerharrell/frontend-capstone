@@ -85,47 +85,55 @@
   color: black;
   background-color: lightgray; }
 
-#all-filter {
+.color-theme #all-filter {
   background-color: #7D1F3D; }
 
-#all-filter:hover,
-#all-filter.active-filter {
+.color-theme #all-filter:hover,
+.color-theme #all-filter.active-filter {
   background-color: #F26161; }
 
-#movie-filter {
+.color-theme #movie-filter {
   background-color: #9D4D38; }
 
-#movie-filter:hover,
-#movie-filter.active-filter {
+.color-theme #movie-filter:hover,
+.color-theme #movie-filter.active-filter {
   background-color: #F8A96F; }
 
-#show-filter {
+.color-theme #show-filter {
   background-color: #A44F6C; }
 
-#show-filter:hover,
-#show-filter.active-filter {
+.color-theme #show-filter:hover,
+.color-theme #show-filter.active-filter {
   background-color: #FBDEEB; }
 
-#music-filter {
+.color-theme #music-filter {
   background-color: #1B5056; }
 
-#music-filter:hover,
-#music-filter.active-filter {
+.color-theme #music-filter:hover,
+.color-theme #music-filter.active-filter {
   background-color: #C4E5D4; }
 
-#book-filter {
+.color-theme #book-filter {
   background-color: #355688; }
 
-#book-filter:hover,
-#book-filter.active-filter {
+.color-theme #book-filter:hover,
+.color-theme #book-filter.active-filter {
   background-color: #C5DEF3; }
 
-#game-filter {
+.color-theme #game-filter {
   background-color: #6A3872; }
 
-#game-filter:hover,
-#game-filter.active-filter {
+.color-theme #game-filter:hover,
+.color-theme #game-filter.active-filter {
   background-color: #CFD2E9; }
+
+.gray-theme #all-filter,
+.gray-theme #movie-filter,
+.gray-theme #show-filter,
+.gray-theme #music-filter,
+.gray-theme #book-filter,
+.gray-theme #game-filter {
+  background-color: gray; }
 
 body {
   background-color: #b0aac2; }
