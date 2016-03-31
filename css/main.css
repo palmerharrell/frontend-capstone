@@ -37,42 +37,42 @@
   color: black; }
 
 #all-filter {
-  background-color: #D53350; }
+  background-color: #7D1F3D; }
 
 #all-filter:hover,
 #all-filter.active-filter {
   background-color: #F26161; }
 
 #movie-filter {
-  background-color: #F48340; }
+  background-color: #9D4D38; }
 
 #movie-filter:hover,
 #movie-filter.active-filter {
   background-color: #F8A96F; }
 
 #show-filter {
-  background-color: #F390BC; }
+  background-color: #A44F6C; }
 
 #show-filter:hover,
 #show-filter.active-filter {
   background-color: #FBDEEB; }
 
 #music-filter {
-  background-color: #4FC0A1; }
+  background-color: #1B5056; }
 
 #music-filter:hover,
 #music-filter.active-filter {
   background-color: #C4E5D4; }
 
 #book-filter {
-  background-color: #178FBF; }
+  background-color: #355688; }
 
 #book-filter:hover,
 #book-filter.active-filter {
   background-color: #C5DEF3; }
 
 #game-filter {
-  background-color: #A57AB4; }
+  background-color: #6A3872; }
 
 #game-filter:hover,
 #game-filter.active-filter {
