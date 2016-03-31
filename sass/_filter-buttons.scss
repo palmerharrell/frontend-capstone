@@ -3,7 +3,7 @@
 	margin-bottom: 30px;
 	text-align: center;
 	div {
-		border: 1px dashed royalblue;
+		// border: 1px dashed royalblue;
 		height: 40px;
 		line-height: 40px;
 	}
@@ -30,6 +30,39 @@
 .active-filter {
 	color: black;
 }
+
+
+// Backlog/Finished & Theme Buttons
+#backlog-button,
+#finished-button,
+#bw-button,
+#color-button {
+	border: 1px solid white;
+	font-weight: bold;
+}
+
+#backlog-button {
+	background-color: lightgray;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#finished-button {
+	color: white;
+	background-color: slategray;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#bw-button {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+#color-button {
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
 
 // Media Filter Buttons
 #all-filter {

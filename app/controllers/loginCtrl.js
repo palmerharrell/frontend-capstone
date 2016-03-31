@@ -40,7 +40,7 @@ app.controller("LoginCtrl",
         .authenticate($scope.account)
         .then(() => {
           $location.path("/");
-          $scope.$apply();  // Needed for $location.path() to succeed
+          $scope.$apply();
         });
 
 
