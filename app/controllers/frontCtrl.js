@@ -148,6 +148,22 @@ app.controller("frontCtrl", [
       $(clickedButtonId).addClass("active-filter");
     };
 
+    $scope.backlogButtonClasses = function(e) {
+      var clickedButtonId = `#${e.target.id}`;
+      console.log("clickedButtonId", clickedButtonId);
+      // remove .active-filter from other button
+      if (clickedButtonId === "#backlog-button") {
+        $("#finished-button").removeClass("active-filter");
+        $("#finished-button").addClass("hand");
+      } else {
+        $("#backlog-button").removeClass("active-filter");
+        $("#backlog-button").addClass("hand");
+      };
+      // add .active-filter to clicked button
+      $(clickedButtonId).addClass("active-filter");
+      $(clickedButtonId).removeClass("hand");
+    };
+
     $scope.applyClass = function(item) {
       if (item.type === "Book") {
         return "book-item";

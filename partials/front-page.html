@@ -3,8 +3,8 @@
 
 	<!-- Filter rows -->
 	<div class="row list-filters">
-		<div id="backlog-button" class="col-md-4" ng-click="selectedFilters.finished = false">Backlog</div>
-		<div id="finished-button" class="col-md-2 hand" ng-click="selectedFilters.finished = true">Finished</div>
+		<div id="backlog-button" class="col-md-4 active-filter" ng-click="selectedFilters.finished = false; backlogButtonClasses($event)">Backlog</div>
+		<div id="finished-button" class="col-md-2 hand" ng-click="selectedFilters.finished = true; backlogButtonClasses($event)">Finished</div>
 		<div id="theme-label" class="col-md-2 hand" ng-click="selectedFilters.finished = true">BLank or Label</div>
 		<div id="bw-button" class="col-md-2 hand" ng-click="selectedFilters.finished = true">B/W</div>
 		<div id="color-button" class="col-md-2 hand" ng-click="selectedFilters.finished = true">Color</div>

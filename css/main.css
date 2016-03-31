@@ -17,7 +17,7 @@
   text-align: center; }
   .list-filters div {
     height: 25px;
-    line-height: 25px; }
+    line-height: 23px; }
 
 .media-filters {
   text-align: center;
@@ -43,7 +43,8 @@
   font-weight: bold; }
 
 #backlog-button {
-  background-color: lightgray;
+  background-color: slategray;
+  color: white;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
 
