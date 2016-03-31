@@ -150,7 +150,7 @@ app.controller("frontCtrl", [
 
     $scope.backlogButtonClasses = function(e) {
       var clickedButtonId = `#${e.target.id}`;
-      console.log("clickedButtonId", clickedButtonId);
+      // console.log("clickedButtonId", clickedButtonId);
       // remove .active-filter from other button
       if (clickedButtonId === "#backlog-button") {
         $("#finished-button").removeClass("active-filter");
@@ -158,10 +158,29 @@ app.controller("frontCtrl", [
       } else {
         $("#backlog-button").removeClass("active-filter");
         $("#backlog-button").addClass("hand");
-      };
+      }
       // add .active-filter to clicked button
       $(clickedButtonId).addClass("active-filter");
       $(clickedButtonId).removeClass("hand");
+    };
+
+    $scope.changeTheme = function(e) {
+      var clickedButtonId = `#${e.target.id}`;
+      if (clickedButtonId === "#bw-button") {
+        $("#color-button").removeClass("active-filter");
+        $("#color-button").addClass("hand");
+        $("#front-container").removeClass("color-theme");
+        $("#front-container").addClass("gray-theme");
+      } else {
+        $("#bw-button").removeClass("active-filter");
+        $("#bw-button").addClass("hand");
+        $("#front-container").removeClass("gray-theme");
+        $("#front-container").addClass("color-theme");
+      }
+      // add .active-filter to clicked button
+      $(clickedButtonId).addClass("active-filter");
+      $(clickedButtonId).removeClass("hand");
+
     };
 
     $scope.applyClass = function(item) {
