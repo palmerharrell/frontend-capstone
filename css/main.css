@@ -1,15 +1,30 @@
 #login-page {
   margin-top: 10%;
-  text-align: center; }
+  text-align: center;
+  background-color: #b0aac2;
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  padding: 50px; }
+  #login-page .col-md-12 {
+    margin-bottom: 20px; }
+    #login-page .col-md-12 h3 {
+      color: white; }
   #login-page .login-label {
-    text-align: right;
     height: 40px;
-    line-height: 40px; }
+    line-height: 30px;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    padding-right: 0; }
   #login-page .login-button {
     text-align: center; }
   #login-page #email-input,
   #login-page #pword-input {
     width: 100%;
+    height: 30px;
     padding: 5px; }
 
 .list-filters {
@@ -141,7 +156,7 @@
   background-color: gray; }
 
 body {
-  background-color: #b0aac2; }
+  background-color: white; }
 
 .page-header {
   border: none; }
@@ -244,7 +259,12 @@ body {
 .del-button {
   width: 5%;
   float: right;
-  padding-right: 0; }
+  padding-right: 0;
+  color: white;
+  -webkit-text-stroke: 1px gray; }
+
+.del-button:hover {
+  color: gray; }
 
 .right {
   text-align: right; }
