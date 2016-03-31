@@ -39,7 +39,7 @@ app.controller("frontCtrl", [
       getFactory().then(
           function(JSONobjFromGet) { // Handle RESOLVE
             for(var key in JSONobjFromGet) {
-              console.log("Item: ", JSONobjFromGet[key].name, "Finished: ", JSONobjFromGet[key].finished);
+              // console.log("Item: ", JSONobjFromGet[key].name, "Finished: ", JSONobjFromGet[key].finished);
               JSONobjFromGet[key].id = key;
               JSONobjFromGet[key].fbuid = currentUser.uid;
               $scope.localCopy.push(JSONobjFromGet[key]);

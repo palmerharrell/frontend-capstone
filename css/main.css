@@ -13,11 +13,11 @@
     padding: 5px; }
 
 .list-filters {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center; }
   .list-filters div {
-    height: 40px;
-    line-height: 40px; }
+    height: 25px;
+    line-height: 25px; }
 
 .media-filters {
   text-align: center;
@@ -47,19 +47,42 @@
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
 
+#backlog-button:hover,
+#backlog-button.active-filter {
+  color: black;
+  background-color: lightgray; }
+
 #finished-button {
   color: white;
   background-color: slategray;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
 
+#finished-button:hover,
+#finished-button.active-filter {
+  color: black;
+  background-color: lightgray; }
+
 #bw-button {
+  color: white;
+  background-color: slategray;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
 
+#bw-button:hover,
+#bw-button.active-filter {
+  color: black;
+  background-color: lightgray; }
+
 #color-button {
+  background-color: lightgray;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
+
+#color-button:hover,
+#color-button.active-filter {
+  color: black;
+  background-color: lightgray; }
 
 #all-filter {
   background-color: #7D1F3D; }
