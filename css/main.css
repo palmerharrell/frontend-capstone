@@ -153,7 +153,21 @@
 .gray-theme #music-filter,
 .gray-theme #book-filter,
 .gray-theme #game-filter {
-  background-color: gray; }
+  background-color: slategray; }
+
+.gray-theme #all-filter:hover,
+.gray-theme #movie-filter:hover,
+.gray-theme #show-filter:hover,
+.gray-theme #music-filter:hover,
+.gray-theme #book-filter:hover,
+.gray-theme #game-filter:hover,
+.gray-theme #all-filter.active-filter,
+.gray-theme #movie-filter.active-filter,
+.gray-theme #show-filter.active-filter,
+.gray-theme #music-filter.active-filter,
+.gray-theme #book-filter.active-filter,
+.gray-theme #game-filter.active-filter {
+  background-color: lightgray; }
 
 body {
   background-color: white; }
@@ -167,7 +181,10 @@ body {
   text-align: center; }
 
 .new-item {
-  padding: 10px; }
+  padding: 10px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white; }
 
 .list-headers {
   font-weight: bold;
@@ -262,9 +279,8 @@ body {
   padding-right: 0;
   color: white;
   -webkit-text-stroke: 1px gray; }
-
-.del-button:hover {
-  color: gray; }
+  .del-button span:hover {
+    color: gray; }
 
 .right {
   text-align: right; }

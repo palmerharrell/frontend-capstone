@@ -60,7 +60,21 @@
 	#music-filter,
 	#book-filter,
 	#game-filter {
-		background-color: gray;
+		background-color: slategray;
+	}
+	#all-filter:hover,
+	#movie-filter:hover,
+	#show-filter:hover,
+	#music-filter:hover,
+	#book-filter:hover,
+	#game-filter:hover,
+	#all-filter.active-filter,
+	#movie-filter.active-filter,
+	#show-filter.active-filter,
+	#music-filter.active-filter,
+	#book-filter.active-filter,
+	#game-filter.active-filter {
+		background-color: lightgray;
 	}
 } // END GRAY THEME
 

@@ -143,9 +143,11 @@ app.controller("frontCtrl", [
       for (var i = 0; i < filterButtons.length; i++) {
         var currentButton = filterButtons[i];
         $(currentButton).removeClass("active-filter");
+        $(currentButton).addClass("hand");
       }
       // add .active-filter to clicked button
       $(clickedButtonId).addClass("active-filter");
+      $(clickedButtonId).removeClass("hand");
     };
 
     $scope.backlogButtonClasses = function(e) {
