@@ -27,6 +27,91 @@
     height: 30px;
     padding: 5px; }
 
+.color-theme #all-filter {
+  background-color: #7D1F3D; }
+
+.color-theme #all-filter:hover,
+.color-theme #all-filter.active-filter {
+  background-color: #F26161; }
+
+.color-theme #movie-filter {
+  background-color: #9D4D38; }
+
+.color-theme #movie-filter:hover,
+.color-theme #movie-filter.active-filter {
+  background-color: #F8A96F; }
+
+.color-theme #show-filter {
+  background-color: #A44F6C; }
+
+.color-theme #show-filter:hover,
+.color-theme #show-filter.active-filter {
+  background-color: #FBDEEB; }
+
+.color-theme #music-filter {
+  background-color: #1B5056; }
+
+.color-theme #music-filter:hover,
+.color-theme #music-filter.active-filter {
+  background-color: #C4E5D4; }
+
+.color-theme #book-filter {
+  background-color: #355688; }
+
+.color-theme #book-filter:hover,
+.color-theme #book-filter.active-filter {
+  background-color: #C5DEF3; }
+
+.color-theme #game-filter {
+  background-color: #6A3872; }
+
+.color-theme #game-filter:hover,
+.color-theme #game-filter.active-filter {
+  background-color: #CFD2E9; }
+
+.color-theme .book-item {
+  background-color: #C5DEF3; }
+
+.color-theme .show-item {
+  background-color: #FBDEEB; }
+
+.color-theme .movie-item {
+  background-color: #F8A96F; }
+
+.color-theme .music-item {
+  background-color: #C4E5D4; }
+
+.color-theme .game-item {
+  background-color: #CFD2E9; }
+
+.gray-theme #all-filter,
+.gray-theme #movie-filter,
+.gray-theme #show-filter,
+.gray-theme #music-filter,
+.gray-theme #book-filter,
+.gray-theme #game-filter {
+  background-color: slategray; }
+
+.gray-theme #all-filter:hover,
+.gray-theme #movie-filter:hover,
+.gray-theme #show-filter:hover,
+.gray-theme #music-filter:hover,
+.gray-theme #book-filter:hover,
+.gray-theme #game-filter:hover,
+.gray-theme #all-filter.active-filter,
+.gray-theme #movie-filter.active-filter,
+.gray-theme #show-filter.active-filter,
+.gray-theme #music-filter.active-filter,
+.gray-theme #book-filter.active-filter,
+.gray-theme #game-filter.active-filter {
+  background-color: lightgray; }
+
+.gray-theme .list-item:nth-child(odd) {
+  background-color: #f2efe8; }
+
+.gray-theme .list-item:nth-child(even) {
+  background-color: lightgray; }
+
 .list-filters {
   margin-bottom: 10px;
   text-align: center; }
@@ -105,70 +190,6 @@
   color: black;
   background-color: lightgray; }
 
-.color-theme #all-filter {
-  background-color: #7D1F3D; }
-
-.color-theme #all-filter:hover,
-.color-theme #all-filter.active-filter {
-  background-color: #F26161; }
-
-.color-theme #movie-filter {
-  background-color: #9D4D38; }
-
-.color-theme #movie-filter:hover,
-.color-theme #movie-filter.active-filter {
-  background-color: #F8A96F; }
-
-.color-theme #show-filter {
-  background-color: #A44F6C; }
-
-.color-theme #show-filter:hover,
-.color-theme #show-filter.active-filter {
-  background-color: #FBDEEB; }
-
-.color-theme #music-filter {
-  background-color: #1B5056; }
-
-.color-theme #music-filter:hover,
-.color-theme #music-filter.active-filter {
-  background-color: #C4E5D4; }
-
-.color-theme #book-filter {
-  background-color: #355688; }
-
-.color-theme #book-filter:hover,
-.color-theme #book-filter.active-filter {
-  background-color: #C5DEF3; }
-
-.color-theme #game-filter {
-  background-color: #6A3872; }
-
-.color-theme #game-filter:hover,
-.color-theme #game-filter.active-filter {
-  background-color: #CFD2E9; }
-
-.gray-theme #all-filter,
-.gray-theme #movie-filter,
-.gray-theme #show-filter,
-.gray-theme #music-filter,
-.gray-theme #book-filter,
-.gray-theme #game-filter {
-  background-color: slategray; }
-
-.gray-theme #all-filter:hover,
-.gray-theme #movie-filter:hover,
-.gray-theme #show-filter:hover,
-.gray-theme #music-filter:hover,
-.gray-theme #book-filter:hover,
-.gray-theme #game-filter:hover,
-.gray-theme #all-filter.active-filter,
-.gray-theme #movie-filter.active-filter,
-.gray-theme #show-filter.active-filter,
-.gray-theme #music-filter.active-filter,
-.gray-theme #book-filter.active-filter,
-.gray-theme #game-filter.active-filter {
-  background-color: lightgray; }
-
 body {
   background-color: white; }
 
@@ -229,21 +250,6 @@ body {
 .notes-column,
 .notes-header {
   width: 400px; }
-
-.book-item {
-  background-color: #C5DEF3; }
-
-.show-item {
-  background-color: #FBDEEB; }
-
-.movie-item {
-  background-color: #F8A96F; }
-
-.music-item {
-  background-color: #C4E5D4; }
-
-.game-item {
-  background-color: #CFD2E9; }
 
 #name-input {
   position: relative;

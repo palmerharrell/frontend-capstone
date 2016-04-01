@@ -48,6 +48,29 @@
 	#game-filter.active-filter {
 		background-color: $purple-light;
 	}
+
+	// ROW COLOR BY MEDIA TYPE
+	.book-item {
+		background-color: $blue-light;
+	}
+
+	.show-item {
+		background-color: $pink-light;
+	}
+
+	.movie-item {
+		background-color: $orange-light;
+	}
+
+	.music-item {
+		background-color: $green-light;
+	}
+
+	.game-item {
+		background-color: $purple-light;
+	}
+	
+
 } // END COLOR THEME
 
 
@@ -74,6 +97,12 @@
 	#music-filter.active-filter,
 	#book-filter.active-filter,
 	#game-filter.active-filter {
+		background-color: lightgray;
+	}
+	.list-item:nth-child(odd) {
+		background-color: $light;
+	}
+	.list-item:nth-child(even) {
 		background-color: lightgray;
 	}
 } // END GRAY THEME

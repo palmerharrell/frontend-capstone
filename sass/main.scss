@@ -1,7 +1,7 @@
 @import 'colors';
 @import 'login';
-@import 'filter-buttons';
 @import 'themes';
+@import 'filter-buttons';
 
 body {
 	// font-size: 1.3em;
@@ -21,6 +21,32 @@ body {
 		// background-color: green;
 	}
 }
+
+
+// .color-theme {
+// 		// ROW COLOR BY MEDIA TYPE
+// 		.book-item {
+// 			background-color: $blue-light;
+// 		}
+
+// 		.show-item {
+// 			background-color: $pink-light;
+// 		}
+
+// 		.movie-item {
+// 			background-color: $orange-light;
+// 		}
+
+// 		.music-item {
+// 			background-color: $green-light;
+// 		}
+
+// 		.game-item {
+// 			background-color: $purple-light;
+// 		}
+// 	}
+
+
 
 // .page-head {
 // 	background-color: green;
@@ -158,26 +184,7 @@ body {
 
 
 
-// ROW COLOR BY MEDIA TYPE
-.book-item {
-	background-color: $blue-light;
-}
 
-.show-item {
-	background-color: $pink-light;
-}
-
-.movie-item {
-	background-color: $orange-light;
-}
-
-.music-item {
-	background-color: $green-light;
-}
-
-.game-item {
-	background-color: $purple-light;
-}
 
 
 
