@@ -1,7 +1,7 @@
 #login-page {
   margin-top: 10%;
   text-align: center;
-  background-color: #b0aac2;
+  background-color: slategray;
   border: 1px solid white;
   border-radius: 10px;
   width: 600px;
@@ -250,6 +250,12 @@ body {
 .notes-column,
 .notes-header {
   width: 400px; }
+
+.sort-link:hover {
+  text-decoration: underline; }
+
+.active-sort {
+  text-decoration: underline; }
 
 #name-input {
   position: relative;

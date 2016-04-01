@@ -184,9 +184,13 @@ body {
 
 
 
+.sort-link:hover {
+	text-decoration: underline;
+}
 
-
-
+.active-sort {
+	text-decoration: underline;
+}
 
 #name-input {
 	position: relative;

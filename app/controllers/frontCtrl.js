@@ -150,6 +150,20 @@ app.controller("frontCtrl", [
       $(clickedButtonId).removeClass("hand");
     };
 
+    $scope.sortLinkClasses = function(e) {
+      console.log("event", e);
+      var clickedLinkId = `#${e.target.id}`;
+      console.log("clickedLinkId", clickedLinkId);
+      var sortLinks = $(".sort-link");
+      for (var i = 0; i < sortLinks.length; i++) {
+        var currentLink = sortLinks[i];
+        $(currentLink).removeClass("active-sort");
+        $(currentLink).addClass("hand");
+      }
+      $(clickedLinkId).addClass("active-sort");
+      $(clickedLinkId).removeClass("hand");
+    };
+
     $scope.backlogButtonClasses = function(e) {
       var clickedButtonId = `#${e.target.id}`;
       // console.log("clickedButtonId", clickedButtonId);

@@ -1,5 +1,5 @@
 
-<div id="front-container" class="container gray-theme" ng-init="selectedFilters.finished = false"> <!-- Filter to show only Backlog on page load -->
+<div id="front-container" class="container gray-theme" ng-init="selectedFilters.finished = false; sortOrder = 'date'"> <!-- Filter to show only Backlog on page load / sort initially by date -->
 
 	<!-- Filter rows -->
 	<div class="row list-filters">
@@ -21,17 +21,17 @@
 
 	<div class="row list-headers">
 		<div class="col-md-1 finished-column"><!-- Finished --></div>
-		<div class="col-md-3 name-header">Name</div>
-		<div class="col-md-1 type-header">Type</div>
-		<div class="col-md-2 rec-header">Recommended By</div>
-		<div class="col-md-3 notes-header">Notes</div>
-		<div class="col-md-1">Added</div>
+		<div class="col-md-3 name-header"><span id="name-link" class="hand sort-link" ng-click="sortOrder = 'name'; sortLinkClasses($event)">Name</span></div>
+		<div class="col-md-1 type-header"><span id="type-link" class="hand sort-link" ng-click="sortOrder = 'type'; sortLinkClasses($event)">Type</span></div>
+		<div class="col-md-2 rec-header"><span id="rec-link" class="hand sort-link" ng-click="sortOrder = 'recommended'; sortLinkClasses($event)">Recommended By</span></div>
+		<div class="col-md-3 notes-header"><span id="notes-link" class="hand sort-link" ng-click="sortOrder = 'notes'; sortLinkClasses($event)">Notes</span></div>
+		<div class="col-md-1"><span id="added-link" class="active-sort sort-link" ng-click="sortOrder = 'date'; sortLinkClasses($event)">Added</span></div>
 		<div class="col-md-1 right"><!-- Delete --></div>
 	</div> <!-- END Headings row -->
 
 	<div class="spreadsheet">
 	<!-- START ng-repeat .list-item -->
-		<div class="row list-item"  ng-class="applyClass(item)" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: 'date'">
+		<div class="row list-item"  ng-class="applyClass(item)" ng-repeat="item in localCopy | filter: selectedFilters | orderBy: sortOrder">
 			
 			<!-- <div ng-class="applyClass(item)"> -->
 				<!-- Finished Column -->
