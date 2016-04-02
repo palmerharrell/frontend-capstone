@@ -35,11 +35,11 @@
   background-color: #7D1F3D; }
 
 .color-theme #movie-filter {
-  background-color: #F8A96F; }
+  background-color: #FEE898; }
 
 .color-theme #movie-filter:hover,
 .color-theme #movie-filter.active-filter {
-  background-color: #9D4D38; }
+  background-color: #AC7A2A; }
 
 .color-theme #show-filter {
   background-color: #FBDEEB; }
@@ -76,7 +76,7 @@
   background-color: #FBDEEB; }
 
 .color-theme .movie-item {
-  background-color: #F8A96F; }
+  background-color: #FEE898; }
 
 .color-theme .music-item {
   background-color: #C4E5D4; }
