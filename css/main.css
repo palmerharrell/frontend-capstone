@@ -28,46 +28,46 @@
     padding: 5px; }
 
 .color-theme #all-filter {
-  background-color: #7D1F3D; }
+  background-color: #F26161; }
 
 .color-theme #all-filter:hover,
 .color-theme #all-filter.active-filter {
-  background-color: #F26161; }
+  background-color: #7D1F3D; }
 
 .color-theme #movie-filter {
-  background-color: #9D4D38; }
+  background-color: #F8A96F; }
 
 .color-theme #movie-filter:hover,
 .color-theme #movie-filter.active-filter {
-  background-color: #F8A96F; }
+  background-color: #9D4D38; }
 
 .color-theme #show-filter {
-  background-color: #A44F6C; }
+  background-color: #FBDEEB; }
 
 .color-theme #show-filter:hover,
 .color-theme #show-filter.active-filter {
-  background-color: #FBDEEB; }
+  background-color: #A44F6C; }
 
 .color-theme #music-filter {
-  background-color: #1B5056; }
+  background-color: #C4E5D4; }
 
 .color-theme #music-filter:hover,
 .color-theme #music-filter.active-filter {
-  background-color: #C4E5D4; }
+  background-color: #1B5056; }
 
 .color-theme #book-filter {
-  background-color: #355688; }
+  background-color: #C5DEF3; }
 
 .color-theme #book-filter:hover,
 .color-theme #book-filter.active-filter {
-  background-color: #C5DEF3; }
+  background-color: #355688; }
 
 .color-theme #game-filter {
-  background-color: #6A3872; }
+  background-color: #CFD2E9; }
 
 .color-theme #game-filter:hover,
 .color-theme #game-filter.active-filter {
-  background-color: #CFD2E9; }
+  background-color: #6A3872; }
 
 .color-theme .book-item {
   background-color: #C5DEF3; }
