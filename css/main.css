@@ -193,15 +193,37 @@
   background-color: slategray; }
 
 body {
-  background-color: white; }
+  background-color: white;
+  font-family: 'Roboto', sans-serif; }
 
 .page-header {
   border: none; }
+
+.page-head .heading {
+  color: white;
+  background-color: slategray;
+  border-radius: 10px; }
 
 .page-head div {
   height: 60px;
   line-height: 60px;
   text-align: center; }
+
+.page-head .logout-div {
+  padding-left: 40px; }
+
+.page-head #logout-link {
+  padding: 5px 10px;
+  border: 1px solid white;
+  color: black;
+  font-weight: bold;
+  background-color: lightgray;
+  border-radius: 10px; }
+
+.page-head #logout-link:hover {
+  color: white;
+  background-color: slategray;
+  text-decoration: none; }
 
 .new-item {
   padding: 10px;

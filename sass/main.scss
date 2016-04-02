@@ -10,55 +10,44 @@ body {
 	// background-color: $light;
 	// background-color: $purplish;
 	background-color: white;
+	// font-family: 'Alegreya Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .page-header {
 	border: none;
+	
 }
-
-.page-header {
-	div {
-		// background-color: green;
-	}
-}
-
-
-// .color-theme {
-// 		// ROW COLOR BY MEDIA TYPE
-// 		.book-item {
-// 			background-color: $blue-light;
-// 		}
-
-// 		.show-item {
-// 			background-color: $pink-light;
-// 		}
-
-// 		.movie-item {
-// 			background-color: $orange-light;
-// 		}
-
-// 		.music-item {
-// 			background-color: $green-light;
-// 		}
-
-// 		.game-item {
-// 			background-color: $purple-light;
-// 		}
-// 	}
-
-
-
-// .page-head {
-// 	background-color: green;
-// }
 
 .page-head {
+	.heading {
+		color: white;
+		background-color: slategray;
+		border-radius: 10px;
+	}
 	div {
 		// border: 1px dashed royalblue;
 		height: 60px;
 		line-height: 60px;
 		text-align: center;
 		// background-color: red;
+	}
+	.logout-div {
+		padding-left: 40px;
+	}
+	#logout-link {
+		padding: 5px 10px;
+		border: 1px solid white;
+		color: black;
+		font-weight: bold;
+		background-color: lightgray;
+		border-radius: 10px;
+	}
+	#logout-link:hover {
+		color: white;
+		background-color: slategray;
+		text-decoration: none;
+
 	}
 }
 
@@ -68,15 +57,6 @@ body {
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 	border-bottom: 1px solid white;
-}
-
-// .data-cell:hover {
-// 	border: 1px solid white;
-// 	border-radius: 10px;
-// }
-
-#front-container {
-	// padding: 0;
 }
 
 .list-headers {
@@ -123,38 +103,10 @@ body {
 }
 
 .spreadsheet {
-	// position: relative;
-	// width: 100%;
-	// top: 40px;
-	// left: 0px;
-	// overflow-y: scroll;
-	// overflow-x: hidden;
-	// padding: 0;
-	// width: 1200px;
-	// height: 80%;
-	// margin: 0;
 	.row:last-of-type {
 		border-bottom: 1px solid white;
 	}
 }
-
-
-// EXAMPLE SCROLLING DIV CODE
-// ​.header
-// {
-//     height:50px;
-// }
-// .content
-// {
-//     position:absolute;
-//     top: 50px;
-//     left:0px;
-//     right:0px;
-//     bottom:0px;
-//     overflow-y:scroll;        
-// }​
-// END EXAMPLE SCROLLING DIV CODE
-
 
 .finished-column {
 	width: 10px;
@@ -171,18 +123,6 @@ body {
 .notes-header {
 	width: 400px;
 }
-
-// ALTERNATING ROW COLORS
-// .list-item:nth-child(even) {
-// 	background-color: $light;
-// }
-
-// .list-item:nth-child(odd) {
-// 	background-color: $greenish;
-// }
-// END ALTERNATING ROW COLORS
-
-
 
 .sort-link:hover {
 	text-decoration: underline;
@@ -241,11 +181,6 @@ body {
  		color: gray;
  	}
 }
-
-// .del-button:hover {
-// 	// -webkit-text-fill-color: transparent;
-// 	color: gray;
-// }
 
 .right {
 	text-align: right;
