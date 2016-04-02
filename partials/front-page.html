@@ -5,7 +5,10 @@
 	<div class="row list-filters">
 		<div id="backlog-button" class="col-md-4 active-filter" ng-click="selectedFilters.finished = false; backlogButtonClasses($event)">Backlog</div>
 		<div id="finished-button" class="col-md-2 hand" ng-click="selectedFilters.finished = true; backlogButtonClasses($event)">Finished</div>
-		<div id="theme-label" class="col-md-2">Theme:</div>
+		<div id="search-box" class="col-md-2">
+			<!-- <input type="text" placeholder="Search" ng-model="selectedFilters"> -->
+			Theme:
+		</div>
 		<div id="bw-button" class="col-md-2 active-filter" ng-click="changeTheme($event)">Gray</div>
 		<div id="color-button" class="col-md-2 hand" ng-click="changeTheme($event)">Color</div>
 	</div>

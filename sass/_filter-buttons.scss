@@ -11,7 +11,7 @@
 
 .media-filters {
 	text-align: center;
-	color: white;
+	color: black;
 	font-weight: bold;
 	// margin-bottom: 10px;
 	div {
@@ -23,12 +23,12 @@
 		line-height: 40px;
 	}
 	div:hover {
-	color: black;
+	color: white;
 	}
 }
 
 .active-filter {
-	color: black;
+	color: white;
 }
 
 
@@ -42,60 +42,73 @@
 }
 
 #backlog-button {
-	color: white;
-	background-color: slategray;
+	color: black;
+	background-color: lightgray;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
 
 #backlog-button:hover,
 #backlog-button.active-filter {
-	color: black;
-	background-color: lightgray;
+	color: white;
+	background-color: slategray;
 }
 
 #finished-button {
-	color: white;
-	background-color: slategray;
+	color: black;
+	background-color: lightgray;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
 #finished-button:hover,
 #finished-button.active-filter {
-	color: black;
-	background-color: lightgray;
+	color: white;
+	background-color: slategray;
 }
 
+
+#search-box,
 #theme-label {
 	text-align: right;
 	font-weight: bold;
+	padding-right: 5px;
 }
 
+// #search-box {
+// 	// width: 90px;
+// 	// width: 100%;
+// 	padding: 0;
+// 	input {
+// 		width: 95%;
+// 		height: 25px;
+// 	}
+// }
+
 #bw-button {
-	color: white;
-	background-color: slategray;
+	color: black;
+	background-color: lightgray;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 }
 
 #bw-button:hover,
 #bw-button.active-filter {
-	color: black;
-	background-color: lightgray;
+	color: white;
+	background-color: slategray;
 }
 
 #color-button {
-	color: white;
-	background-color: slategray;
+	color: black;
+	background-color: lightgray;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
 
 #color-button:hover,
 #color-button.active-filter {
-	color: black;
-	background-color: lightgray;
+	color: white;
+	background-color: slategray;
 }
 
 

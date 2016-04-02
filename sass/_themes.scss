@@ -77,13 +77,16 @@
 // ~~~ GRAY THEME ~~~
 // Media Filter Buttons
 .gray-theme {
+	.filter-button {
+		// color: white;
+	}
 	#all-filter,
 	#movie-filter,
 	#show-filter,
 	#music-filter,
 	#book-filter,
 	#game-filter {
-		background-color: slategray;
+		background-color: lightgray;
 	}
 	#all-filter:hover,
 	#movie-filter:hover,
@@ -97,7 +100,7 @@
 	#music-filter.active-filter,
 	#book-filter.active-filter,
 	#game-filter.active-filter {
-		background-color: lightgray;
+		background-color: slategray;
 	}
 	.list-item:nth-child(odd) {
 		background-color: $light;
