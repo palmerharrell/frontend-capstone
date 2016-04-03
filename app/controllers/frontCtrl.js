@@ -8,11 +8,7 @@ app.controller("frontCtrl", [
   
   function($scope, $http, firebaseURL, $firebaseObject, getFactory, authFactory) {
     
-    console.log("frontCtrl.js is running.");
-
     var currentUser = authFactory.getUser();
-    console.log("currentUser ID: ", currentUser.uid);
-
     var selectedFilters = {};
     
     // For editing properties of existing items
@@ -39,7 +35,6 @@ app.controller("frontCtrl", [
       getFactory().then(
           function(JSONobjFromGet) { // Handle RESOLVE
             for(var key in JSONobjFromGet) {
-              // console.log("Item: ", JSONobjFromGet[key].name, "Finished: ", JSONobjFromGet[key].finished);
               JSONobjFromGet[key].id = key;
               JSONobjFromGet[key].fbuid = currentUser.uid;
               $scope.localCopy.push(JSONobjFromGet[key]);
@@ -52,8 +47,6 @@ app.controller("frontCtrl", [
     };
 
     $scope.addNewItem = function() {
-      console.log("newItem: ", $scope.newItem);
-      // $scope.newItem.date = new Date().toLocaleDateString(); // Set date added
       $scope.newItem.date = new Date(); // Set date added
       $scope.newItem.fbuid = currentUser.uid; // Tie this item to current user
 
@@ -153,7 +146,6 @@ app.controller("frontCtrl", [
     $scope.sortLinkClasses = function(e) {
       console.log("event", e);
       var clickedLinkId = `#${e.target.id}`;
-      // console.log("clickedLinkId", clickedLinkId);
       var sortLinks = $(".sort-link");
       for (var i = 0; i < sortLinks.length; i++) {
         var currentLink = sortLinks[i];
@@ -166,7 +158,6 @@ app.controller("frontCtrl", [
 
     $scope.backlogButtonClasses = function(e) {
       var clickedButtonId = `#${e.target.id}`;
-      // console.log("clickedButtonId", clickedButtonId);
       // remove .active-filter from other button
       if (clickedButtonId === "#backlog-button") {
         $("#finished-button").removeClass("active-filter");

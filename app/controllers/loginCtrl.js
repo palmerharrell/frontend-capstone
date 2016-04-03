@@ -17,7 +17,6 @@ app.controller("LoginCtrl",
     ref.unauth(); // If a user is logged in, log them out
 
     $scope.account = { email: "", password: "" };
-    // $scope.message = "";
 
     // register a new user account and login  
     $scope.register = () => {
