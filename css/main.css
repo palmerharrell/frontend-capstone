@@ -112,11 +112,11 @@
   background-color: lightgray; }
 
 .list-filters {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center; }
   .list-filters div {
-    height: 25px;
-    line-height: 23px; }
+    height: 30px;
+    line-height: 26px; }
 
 .media-filters {
   text-align: center;
@@ -139,13 +139,11 @@
 #bw-button,
 #color-button {
   border: 1px solid white;
-  font-weight: bold; }
+  font-weight: bolder; }
 
 #backlog-button {
   color: black;
-  background-color: lightgray;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; }
+  background-color: lightgray; }
 
 #backlog-button:hover,
 #backlog-button.active-filter {
@@ -154,9 +152,7 @@
 
 #finished-button {
   color: black;
-  background-color: lightgray;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; }
+  background-color: lightgray; }
 
 #finished-button:hover,
 #finished-button.active-filter {
@@ -171,9 +167,7 @@
 
 #bw-button {
   color: black;
-  background-color: lightgray;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px; }
+  background-color: lightgray; }
 
 #bw-button:hover,
 #bw-button.active-filter {
@@ -182,9 +176,7 @@
 
 #color-button {
   color: black;
-  background-color: lightgray;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px; }
+  background-color: lightgray; }
 
 #color-button:hover,
 #color-button.active-filter {
@@ -207,7 +199,7 @@ body {
   width: 100%;
   margin-top: 0;
   padding-top: 30px;
-  border-bottom: 3px solid black; }
+  border-bottom: 2px solid black; }
 
 .page-head .heading {
   color: white; }
