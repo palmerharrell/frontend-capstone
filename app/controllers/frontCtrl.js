@@ -153,7 +153,7 @@ app.controller("frontCtrl", [
     $scope.sortLinkClasses = function(e) {
       console.log("event", e);
       var clickedLinkId = `#${e.target.id}`;
-      console.log("clickedLinkId", clickedLinkId);
+      // console.log("clickedLinkId", clickedLinkId);
       var sortLinks = $(".sort-link");
       for (var i = 0; i < sortLinks.length; i++) {
         var currentLink = sortLinks[i];
@@ -199,6 +199,7 @@ app.controller("frontCtrl", [
 
     };
 
+    // Add class based on type to each list item for color-coding
     $scope.applyClass = function(item) {
       if (item.type === "Book") {
         return "book-item";

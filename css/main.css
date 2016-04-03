@@ -275,6 +275,12 @@ body {
 .notes-header {
   width: 400px; }
 
+#new-name {
+  width: 250px; }
+
+#new-notes {
+  width: 370px; }
+
 .sort-link:hover {
   text-decoration: underline; }
 
