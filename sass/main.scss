@@ -41,6 +41,9 @@ body {
 		// border-radius: 10px;
 	}
 	h1 {
+		// font-family: 'Satisfy', cursive;
+		// font-family: 'Nothing You Could Do', cursive;
+		font-family: 'Slabo 27px', serif;
 		margin-top: 10px;
 	}
 	div {
@@ -57,11 +60,13 @@ body {
 		color: black;
 		font-weight: bold;
 		background-color: lightgray;
+		border: 2px solid black;
 		// border-radius: 10px;
 	}
 	#logout-link:hover {
-		// color: white;
-		background-color: white;
+		color: black;
+		// background-color: white;
+		border: 2px solid black;
 		text-decoration: none;
 
 	}

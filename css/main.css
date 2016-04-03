@@ -213,6 +213,7 @@ body {
   color: white; }
 
 .page-head h1 {
+  font-family: 'Slabo 27px', serif;
   margin-top: 10px; }
 
 .page-head div {
@@ -227,10 +228,12 @@ body {
   padding: 5px 10px;
   color: black;
   font-weight: bold;
-  background-color: lightgray; }
+  background-color: lightgray;
+  border: 2px solid black; }
 
 .page-head #logout-link:hover {
-  background-color: white;
+  color: black;
+  border: 2px solid black;
   text-decoration: none; }
 
 .new-item {
