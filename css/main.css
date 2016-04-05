@@ -228,6 +228,9 @@ body {
   border: 2px solid black;
   text-decoration: none; }
 
+.page-head #demo-link a {
+  color: slategray; }
+
 .new-item {
   padding: 10px;
   border-left: 1px solid white;

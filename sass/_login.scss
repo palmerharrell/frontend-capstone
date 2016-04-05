@@ -1,19 +1,12 @@
 #login-page {
-	// margin-top: 160px;
 	text-align: center;
-	// background-color: $purplish;
 	background-color: slategray;
 	border: 3px solid black;
 	border-radius: 10px;
 	width: 600px;
 	height: 300px;
-	// float: left;
 	margin: 260px auto;
 	padding: 50px;
-	.filler {
-		// border: 1px dashed royalblue;
-		// height: 30px;
-	}
 	.col-md-12 {
 		margin-bottom: 20px;
 		h3 {
@@ -27,18 +20,14 @@
 		text-align: right;
 		font-weight: bold;
 		padding-right: 0;
-		// border: 1px dashed royalblue;
 	}
 	.login-button {
-		// line-height: 40px;
 		text-align: center;
 	}
 	#email-input,
 	#pword-input {
-		// border: 1px dashed royalblue;
 		width: 100%;
 		height: 30px;
 		padding: 5px;
-		// line-height: 30px;
 	}
 }

@@ -4,9 +4,7 @@
 @import 'filter-buttons';
 
 body {
-	// font-size: 1.3em;
 	background-color: white;
-	// font-family: 'Alegreya Sans', sans-serif;
 	font-family: 'Roboto', sans-serif;
 
 }
@@ -18,8 +16,6 @@ body {
 }
 
 .page-header {
-	// border: none;
-	// border: 1px dashed royalblue;
 	background-color: slategray;
 	position: absolute;
 	top: 0;
@@ -29,20 +25,13 @@ body {
 	margin-top: 0;
 	padding-top: 30px;
 	border-bottom: 2px solid black;
-	// padding-bottom: 30px;
 }
 
 .page-head {
-	// border: 1px solid red;
 	.heading {
 		color: white;
-		// font-size: 3.9em;
-		// background-color: slategray;
-		// border-radius: 10px;
 	}
 	h1 {
-		// font-family: 'Satisfy', cursive;
-		// font-family: 'Nothing You Could Do', cursive;
 		font-family: 'Slabo 27px', serif;
 		margin-top: 10px;
 	}
@@ -56,19 +45,20 @@ body {
 	}
 	#logout-link {
 		padding: 5px 10px;
-		// border: 1px solid white;
 		color: black;
 		font-weight: bold;
 		background-color: lightgray;
 		border: 2px solid black;
-		// border-radius: 10px;
 	}
 	#logout-link:hover {
 		color: black;
-		// background-color: white;
 		border: 2px solid black;
 		text-decoration: none;
-
+	}
+	#demo-link {
+		a {
+			color: slategray;
+		}
 	}
 }
 
@@ -83,7 +73,6 @@ body {
 .list-headers {
 	font-weight: bold;
 	height: 20px;
-	// line-height: 30px;
 	border-left: 1px solid white;
 	border-right: 1px solid white;
 	color: white;
@@ -100,9 +89,7 @@ body {
 }
 
 .list-item {
-	// padding: 10px;
 	padding: 10px 10px 6px;
-	// border: 1px solid white;
 	border: 1px solid white;
 	border-bottom: none;
 	input,
